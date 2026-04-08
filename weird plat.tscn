@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://d2xhqcxr41sij"]
+
+[ext_resource type="Texture2D" uid="uid://d1tsy68gif1lm" path="res://Assets/broken plat.png" id="1_m0kvr"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_m0kvr"]
+size = Vector2(15.878302, 6.6934566)
+
+[node name="BrokenPlat2" type="Sprite2D" unique_id=1795742901]
+rotation = 3.1415927
+scale = Vector2(5.44375, 5.44375)
+texture = ExtResource("1_m0kvr")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1959055301]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1263021935]
+position = Vector2(0.040183112, -12.715268)
+scale = Vector2(0.99999994, 0.99999994)
+shape = SubResource("RectangleShape2D_m0kvr")

@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://dnnn1htmdu6ha"]
+
+[ext_resource type="Texture2D" uid="uid://bu4caocefey6d" path="res://Assets/16_x_16(2).png" id="1_3d8rk"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_2e6f6"]
+radius = 7.698466
+
+[node name="16X16(2)" type="Sprite2D" unique_id=278953358]
+scale = Vector2(3.25, 3.25)
+texture = ExtResource("1_3d8rk")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=460047164]
+position = Vector2(-45.23077, 5.8461456)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1559593171]
+position = Vector2(44.92307, -5.538463)
+shape = SubResource("CircleShape2D_2e6f6")

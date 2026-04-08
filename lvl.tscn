@@ -1,0 +1,187 @@
+[gd_scene format=3 uid="uid://b6nfdqpeuo2ec"]
+
+[ext_resource type="PackedScene" uid="uid://bh2gujcwc1eiy" path="res://teeth.tscn" id="1_f2dqo"]
+[ext_resource type="PackedScene" uid="uid://d0pmk23cb40rd" path="res://platformer_stat.tscn" id="1_xliyy"]
+[ext_resource type="PackedScene" uid="uid://cbro7qol3bvoh" path="res://bird_wiz.tscn" id="2_4iw1c"]
+[ext_resource type="PackedScene" uid="uid://k8fdej2ee7rl" path="res://platform_moving.tscn" id="3_4iw1c"]
+[ext_resource type="Script" uid="uid://01u0x7bilm4y" path="res://killbox.gd" id="5_k0o5b"]
+[ext_resource type="PackedScene" uid="uid://c5lxcgbu25loa" path="res://gameplay instructions.tscn" id="7_f2dqo"]
+[ext_resource type="PackedScene" uid="uid://bvps70ore51r" path="res://rotating_platform.tscn" id="8_5ud41"]
+[ext_resource type="PackedScene" uid="uid://dnnn1htmdu6ha" path="res://static plat circle.tscn" id="8_kfp6p"]
+[ext_resource type="PackedScene" uid="uid://yjcs7pr38s30" path="res://portal_revised.tscn" id="10_stq4b"]
+[ext_resource type="PackedScene" uid="uid://d2xhqcxr41sij" path="res://weird plat.tscn" id="58_xj1nr"]
+[ext_resource type="PackedScene" uid="uid://dlumnn7t1yl7d" path="res://tub_2.tscn" id="59_2dd3p"]
+
+[sub_resource type="Curve2D" id="Curve2D_5ud41"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 315.4762, 445.10733, 0, 0, 0, 0, 315.4762, 779.2362, 0, 0, 0, 0, 315.4762, 445.10733)
+}
+point_count = 3
+
+[sub_resource type="Curve2D" id="Curve2D_kfp6p"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 310.71423, 440.3341, 0, 0, 0, 0, 890.4762, 440.3341, 0, 0, 0, 0, 892.85706, 599.0453, 0, 0, 0, 0, 313.0951, 599.0453, 0, 0, 0, 0, 310.71423, 440.3341)
+}
+point_count = 5
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_5ud41"]
+distance = -213.0
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_f2dqo"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_2a1lc"]
+
+[sub_resource type="Curve2D" id="Curve2D_f2dqo"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 278, -43, 0, 0, 0, 0, 280, 356, 0, 0, 0, 0, 374, 357, 0, 0, 0, 0, 376, 149, 0, 0, 0, 0, 375, -45, 0, 0, 0, 0, 278, -44)
+}
+point_count = 6
+
+[node name="LVL" type="Node2D" unique_id=925290357]
+
+[node name="bkg" type="ColorRect" parent="." unique_id=456223926]
+offset_left = -2656.0
+offset_top = -1951.0
+offset_right = 4912.0
+offset_bottom = 2513.0
+color = Color(0.02745098, 0.09411765, 0.12941177, 1)
+metadata/_edit_lock_ = true
+
+[node name="Path2D2" parent="." unique_id=1315880157 instance=ExtResource("3_4iw1c")]
+position = Vector2(654.99994, -95.00001)
+scale = Vector2(0.84, 0.838)
+curve = SubResource("Curve2D_5ud41")
+
+[node name="Path2D4" parent="." unique_id=1580850798 instance=ExtResource("3_4iw1c")]
+position = Vector2(1675.0001, -6.000004)
+scale = Vector2(0.84, 0.838)
+curve = SubResource("Curve2D_kfp6p")
+
+[node name="Path2D3" parent="." unique_id=899127022 instance=ExtResource("3_4iw1c")]
+position = Vector2(460.0001, 970)
+scale = Vector2(0.84, -0.84050804)
+curve = SubResource("Curve2D_5ud41")
+
+[node name="Rotating platform" parent="." unique_id=163208465 instance=ExtResource("8_5ud41")]
+position = Vector2(2767, 202)
+
+[node name="Label" parent="." unique_id=738944035 instance=ExtResource("7_f2dqo")]
+offset_left = -52.99997
+offset_top = 198.0
+offset_right = 448.00003
+offset_bottom = 239.0
+text = "WASD or arrows to walk & jump"
+
+[node name="Label2" parent="." unique_id=2068730833 instance=ExtResource("7_f2dqo")]
+offset_left = 1051.0001
+offset_top = -84.00003
+offset_right = 1933.0002
+offset_bottom = -7.0000305
+text = "retrieve potion juice
+and make it back to the portal"
+horizontal_alignment = 1
+
+[node name="Label3" parent="." unique_id=1331050598 instance=ExtResource("7_f2dqo")]
+offset_left = 1964.0002
+offset_top = 400.00003
+offset_right = 2413.0002
+offset_bottom = 477.00003
+text = "oh, and.... don't get bit!"
+horizontal_alignment = 1
+
+[node name="Label4" parent="." unique_id=1898415996 instance=ExtResource("7_f2dqo")]
+offset_left = 3283.0
+offset_top = -287.0
+offset_right = 3732.0
+offset_bottom = -210.0
+text = "now, return to portal"
+horizontal_alignment = 1
+
+[node name="bird wiz" parent="." unique_id=443955831 instance=ExtResource("2_4iw1c")]
+z_index = 1
+position = Vector2(-221, 264.00003)
+scale = Vector2(1.00403, 1.00235)
+
+[node name="AudioListener2D" type="AudioListener2D" parent="bird wiz" unique_id=1212625771]
+position = Vector2(246.00859, 246.42087)
+scale = Vector2(0.9959863, 0.99765563)
+
+[node name="teeth" parent="." unique_id=862176840 instance=ExtResource("1_f2dqo")]
+position = Vector2(2212, -129)
+
+[node name="Platformer Stat" parent="." unique_id=2089455931 instance=ExtResource("1_xliyy")]
+position = Vector2(340, 541)
+
+[node name="Platformer Stat2" parent="." unique_id=1696825721 instance=ExtResource("1_xliyy")]
+position = Vector2(3312, -75)
+
+[node name="Platformer Stat3" parent="." unique_id=1799891836 instance=ExtResource("1_xliyy")]
+position = Vector2(-74, 541)
+
+[node name="Platformer Stat4" parent="." unique_id=2031065068 instance=ExtResource("1_xliyy")]
+position = Vector2(132, 541)
+
+[node name="Platformer endright" parent="." unique_id=2093356610 instance=ExtResource("1_xliyy")]
+position = Vector2(3518, -75)
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="Platformer endright" unique_id=1191930665]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platformer endright/StaticBody2D2" unique_id=2069662276]
+rotation = -1.5707964
+shape = SubResource("WorldBoundaryShape2D_5ud41")
+
+[node name="Platformer Stat-endleft" parent="." unique_id=1496901851 instance=ExtResource("1_xliyy")]
+position = Vector2(-281, 541)
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="Platformer Stat-endleft" unique_id=94782076]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platformer Stat-endleft/StaticBody2D2" unique_id=489712105]
+position = Vector2(147, 31)
+rotation = 1.5707964
+shape = SubResource("WorldBoundaryShape2D_f2dqo")
+
+[node name="killbox" type="Area2D" parent="." unique_id=471621996]
+position = Vector2(-175, -113)
+scale = Vector2(1.01789, 1.25525)
+script = ExtResource("5_k0o5b")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="killbox" unique_id=1012939293]
+position = Vector2(351.708, 610.238)
+scale = Vector2(1.94792, 2.9054)
+shape = SubResource("WorldBoundaryShape2D_2a1lc")
+
+[node name="Path2D" parent="." unique_id=1742835241 instance=ExtResource("3_4iw1c")]
+position = Vector2(2914, 49.000015)
+scale = Vector2(0.93877554, 0.93877554)
+curve = SubResource("Curve2D_f2dqo")
+
+[node name="note (delete later)" type="Label" parent="." unique_id=770990330]
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="static plat circle2" parent="." unique_id=1540278463 instance=ExtResource("8_kfp6p")]
+position = Vector2(1091, 275)
+
+[node name="static plat circle3" parent="." unique_id=264947002 instance=ExtResource("8_kfp6p")]
+position = Vector2(1453, 320)
+
+[node name="static plat circle6" parent="." unique_id=2098611442 instance=ExtResource("8_kfp6p")]
+position = Vector2(1775.0001, 390)
+
+[node name="static plat circle5" parent="." unique_id=1117544098 instance=ExtResource("8_kfp6p")]
+position = Vector2(1626, 306)
+
+[node name="static plat circle4" parent="." unique_id=1066884123 instance=ExtResource("8_kfp6p")]
+position = Vector2(1311, 235.00003)
+
+[node name="BrokenPlat2" parent="." unique_id=1795742901 instance=ExtResource("58_xj1nr")]
+position = Vector2(264.00003, 475.99997)
+
+[node name="tub2" parent="." unique_id=1309701707 instance=ExtResource("59_2dd3p")]
+position = Vector2(3514, -76)
+
+[node name="portal" parent="." unique_id=659579274 node_paths=PackedStringArray("tub_node") instance=ExtResource("10_stq4b")]
+position = Vector2(-138, 466)
+tub_node = NodePath("../tub2")
+
+[connection signal="body_entered" from="killbox" to="killbox" method="_on_body_entered"]

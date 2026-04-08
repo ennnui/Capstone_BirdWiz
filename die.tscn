@@ -1,0 +1,76 @@
+[gd_scene format=3 uid="uid://daa84makiatba"]
+
+[ext_resource type="FontFile" uid="uid://nm7mtm5iymm7" path="res://Assets/monogram/ttf/monogram.ttf" id="1_gxo0y"]
+[ext_resource type="Script" uid="uid://bk3ynjxkee5w4" path="res://die.gd" id="1_muu1c"]
+[ext_resource type="Texture2D" uid="uid://ok6jrwmekcc4" path="res://Assets/again24x24.png" id="2_muu1c"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_q3244"]
+bg_color = Color(0.02745098, 0.09411765, 0.12941177, 1)
+border_width_left = 15
+border_width_top = 15
+border_width_right = 15
+border_width_bottom = 15
+border_color = Color(0.7921569, 0.007843138, 0.31764707, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_qmayl"]
+font = ExtResource("1_gxo0y")
+font_size = 120
+font_color = Color(0.5803922, 0.8901961, 0.26666668, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_kwyh5"]
+font = ExtResource("1_gxo0y")
+font_size = 20
+font_color = Color(0.7921569, 0.007843138, 0.31764707, 1)
+
+[node name="die" type="Control" unique_id=155252132]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_muu1c")
+
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=237347190]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -277.5
+offset_top = -155.5
+offset_right = 277.5
+offset_bottom = 155.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_q3244")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer" unique_id=78914023]
+layout_mode = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="PanelContainer/VBoxContainer" unique_id=1543262622]
+layout_mode = 2
+text = "you died"
+label_settings = SubResource("LabelSettings_qmayl")
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="Label2" type="Label" parent="PanelContainer/VBoxContainer" unique_id=734351199]
+layout_mode = 2
+text = "TRY AGAIN?"
+label_settings = SubResource("LabelSettings_kwyh5")
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="Button" type="Button" parent="PanelContainer/VBoxContainer" unique_id=1359806645]
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_colors/icon_hover_color = Color(0.5803922, 0.8901961, 0.27058825, 1)
+icon = ExtResource("2_muu1c")
+icon_alignment = 1
+
+[connection signal="button_down" from="PanelContainer/VBoxContainer/Button" to="." method="_on_button_button_down"]

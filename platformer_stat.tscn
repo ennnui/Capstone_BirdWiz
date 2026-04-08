@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://d0pmk23cb40rd"]
+
+[ext_resource type="Texture2D" uid="uid://sb2v7fwhwqrc" path="res://Assets/start point stat.png" id="1_m4mar"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rqtx5"]
+size = Vector2(207, 33)
+
+[node name="Platform Stat" type="Node2D" unique_id=1799891836]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1459346561]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=798826056]
+position = Vector2(108.5, 38.5)
+shape = SubResource("RectangleShape2D_rqtx5")
+
+[node name="StartPointStat" type="Sprite2D" parent="." unique_id=483141316]
+position = Vector2(116.00001, 112.999985)
+scale = Vector2(6.4875007, 6.4875007)
+texture = ExtResource("1_m4mar")

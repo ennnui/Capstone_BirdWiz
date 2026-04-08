@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://c5lxcgbu25loa"]
+
+[ext_resource type="FontFile" uid="uid://nm7mtm5iymm7" path="res://Assets/monogram/ttf/monogram.ttf" id="1_nyk07"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_7g0x0"]
+font = ExtResource("1_nyk07")
+font_size = 46
+
+[node name="Label" type="Label" unique_id=738944035]
+offset_left = 32.0
+offset_top = 8.0
+offset_right = 1089.0
+offset_bottom = 136.0
+text = "WASD or arrows to walk & jump                  retrieve more potion juice and make it back to base                 don't get bit!"
+label_settings = SubResource("LabelSettings_7g0x0")

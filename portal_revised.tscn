@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://yjcs7pr38s30"]
+
+[ext_resource type="Script" uid="uid://cu2lay8eioiqu" path="res://area_2d.gd" id="1_bymwi"]
+[ext_resource type="Texture2D" uid="uid://b6p5y71cefkry" path="res://Assets/portal.png" id="1_tb63m"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bymwi"]
+size = Vector2(108, 144)
+
+[node name="portal" type="Area2D" unique_id=659579274]
+script = ExtResource("1_bymwi")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1042610916]
+position = Vector2(55, 24)
+shape = SubResource("RectangleShape2D_bymwi")
+
+[node name="Portal" type="Sprite2D" parent="." unique_id=1655801392]
+position = Vector2(60.000015, 48)
+scale = Vector2(9.89375, 9.89375)
+texture = ExtResource("1_tb63m")

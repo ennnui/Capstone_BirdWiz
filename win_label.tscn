@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://q1bju7581b8m"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_uchyk"]
+
+[node name="Label" type="Label" unique_id=176111092]
+text = "WIN!"
+label_settings = SubResource("LabelSettings_uchyk")
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true

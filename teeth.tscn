@@ -1,0 +1,217 @@
+[gd_scene format=3 uid="uid://bh2gujcwc1eiy"]
+
+[ext_resource type="Texture2D" uid="uid://rm3sdvpjymye" path="res://open mouth top.png" id="1_238c1"]
+[ext_resource type="Script" uid="uid://bsl0164y1ywem" path="res://teeth.gd" id="1_rbxf8"]
+[ext_resource type="Texture2D" uid="uid://bldcfi27aglu8" path="res://open mouth bot.png" id="2_rbxf8"]
+[ext_resource type="AudioStream" uid="uid://ckxoy6r3fuijt" path="res://Assets/sounds/rawr.mp3" id="4_nhvtx"]
+
+[sub_resource type="Animation" id="Animation_nhvtx"]
+length = 8.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("OpenMouthBot:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(560, 503)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("OpenMouthTop:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(559, 137)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:mouth_closed")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("OpenMouthTop/AnimatableBody2D:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-59.900146, -28.286179)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("OpenMouthBot/AnimatableBody2D:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-930.11646, -227.95343)]
+}
+
+[sub_resource type="Animation" id="Animation_m30r6"]
+resource_name = "open_close"
+length = 5.0666666
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("OpenMouthBot:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.0009999999, 0.17, 0.23349649, 0.30833334, 0.3611332, 0.5301332, 0.99333334, 3.0833333, 4.9933333),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(560, 503), Vector2(563, 472), Vector2(560, 503), Vector2(563, 472), Vector2(560, 503), Vector2(563, 472), Vector2(560, 503), Vector2(560, 388), Vector2(560, 503)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("OpenMouthTop:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.0009999999, 0.17, 0.23349649, 0.30583686, 0.3611332, 0.5301332, 0.99333334, 3.0833333, 4.9933333),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(559, 137), Vector2(561, 162), Vector2(559, 137), Vector2(561, 162), Vector2(559, 137), Vector2(561, 162), Vector2(559, 137), Vector2(559, 292), Vector2(559, 137)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:mouth_closed")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(2.6666667, 2.9, 3.4, 3.5666666),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [false, true, true, false]
+}
+tracks/3/type = "audio"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("AudioStreamPlayer2D")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.15189265,
+"stream": ExtResource("4_nhvtx")
+}],
+"times": PackedFloat32Array(0)
+}
+tracks/3/use_blend = true
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("OpenMouthTop/AnimatableBody2D:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-59.900146, -28.286179)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("OpenMouthBot/AnimatableBody2D:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-930.11646, -227.95343)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_whnn1"]
+_data = {
+&"RESET": SubResource("Animation_nhvtx"),
+&"open_close": SubResource("Animation_m30r6")
+}
+
+[node name="teeth" type="Node2D" unique_id=862176840]
+script = ExtResource("1_rbxf8")
+mouth_closed = true
+
+[node name="OpenMouthTop" type="Sprite2D" parent="." unique_id=1263658910]
+position = Vector2(559, 137)
+scale = Vector2(0.601, 0.601)
+texture = ExtResource("1_238c1")
+
+[node name="AnimatableBody2D" type="AnimatableBody2D" parent="OpenMouthTop" unique_id=783526019]
+position = Vector2(-59.900146, -28.286179)
+scale = Vector2(1.6638935, 1.6638935)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="OpenMouthTop/AnimatableBody2D" unique_id=1383512484]
+position = Vector2(-8.885345, -12.443512)
+scale = Vector2(0.9258019, 0.9258021)
+polygon = PackedVector2Array(381.16724, 89.05089, 347.68274, 75.00902, 321.75928, 86.890594, 313.1181, 86.890594, 283.95422, 56.64656, 224.54626, 19.921646, 201.86322, 29.642944, 180.26031, 22.08194, 124.092834, 70.68843, 73.32599, 69.60829, 35.520935, 48.0054, -9.845154, 58.80684, -48.730347, 58.80684, -96.256714, 37.203964, -121.10004, 39.364243, -141.62277, 35.04367, -197.79031, 55.566406, -231.27478, 71.768585, -247.47696, 81.48988, -262.59897, 92.29132, -288, 97, -304, 68, -234, -24, -40, -86, 234, -72, 389.8084, 14.52092, 387.64807, 72.848724)
+
+[node name="Area2D" type="Area2D" parent="OpenMouthTop" unique_id=273336601]
+position = Vector2(-930.11646, -227.9534)
+scale = Vector2(1.6638935, 1.6638935)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="OpenMouthTop/Area2D" unique_id=1061021918]
+position = Vector2(520, 105)
+polygon = PackedVector2Array(345, 87, 321, 77, 314, 73, 281, 88, 254, 56, 201, 26, 174, 49, 155, 27, 110, 69, 57, 68, 26, 50, 0, 73, -25.135864, 73.502716, -50, 74, -95, 41, -112, 56, -141, 38, -188, 56, -204, 90, -225, 101, -254, 91, -288, 97, -304, 68, -234, -24, -40, -86, 234, -72, 361, 4, 357, 71.831665)
+
+[node name="OpenMouthBot" type="Sprite2D" parent="." unique_id=2140333923]
+position = Vector2(560, 503)
+scale = Vector2(0.601, 0.601)
+texture = ExtResource("2_rbxf8")
+
+[node name="AnimatableBody2D" type="AnimatableBody2D" parent="OpenMouthBot" unique_id=1020369347]
+position = Vector2(-930.11646, -227.95343)
+scale = Vector2(1.6638935, 1.6638935)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="OpenMouthBot/AnimatableBody2D" unique_id=1855544760]
+position = Vector2(595.99994, 157)
+rotation = -3.1415925
+polygon = PackedVector2Array(293.99997, 86.00418, 278.99994, 85, 262.99997, 75.00418, 240.99994, 77, 216.99997, 65.00418, 194.99994, 66, 158.99997, 43.00418, 115.99997, 49.00418, 58, 40.00415, 12, 41.00415, -30, 40.00415, -55.00006, 47.00003, -80, 48.00415, -103, 60.00415, -123.00006, 69.00006, -142, 72.00415, -169.00006, 82.00006, -196, 81.00415, -202.00006, 95.00006, -212.00006, 100.00006, -219.00006, 103.00415, -217, 77.00415, -193, 42.00415, -141, -8.99585, -13, -78.99585, 76, -74.99585, 207.99997, -12.995819, 263.99997, 43.00418)
+
+[node name="Area2D" type="Area2D" parent="OpenMouthBot" unique_id=449628606]
+position = Vector2(-930.11646, -227.9534)
+scale = Vector2(1.6638935, 1.6638935)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="OpenMouthBot/Area2D" unique_id=1430679493]
+position = Vector2(595, 151)
+rotation = 3.1415925
+polygon = PackedVector2Array(293.99997, 86.00418, 280.99997, 96.00418, 262.99997, 75.00418, 235.99997, 78.00418, 216.99997, 65.00418, 201.99997, 75.00418, 158.99997, 43.00418, 115.99997, 49.00418, 58, 40.00415, 12, 41.00415, -30, 40.00415, -47, 53.00415, -80, 48.00415, -103, 60.00415, -131, 84.00415, -142, 72.00415, -169, 87.00415, -196, 81.00415, -202.00006, 104.00415, -211.00006, 107.00415, -219.00006, 103.00415, -217, 77.00415, -193, 42.00415, -141, -8.99585, -13, -78.99585, 76, -74.99585, 207.99997, -12.995819, 263.99997, 43.00418)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=842878224]
+callback_mode_process = 0
+libraries/ = SubResource("AnimationLibrary_whnn1")
+
+[node name="Timer" type="Timer" parent="AnimationPlayer" unique_id=2086134680]
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=845962301]
+max_distance = 1000.0
+attenuation = 2.6390142
+
+[connection signal="body_entered" from="OpenMouthTop/Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="OpenMouthTop/Area2D" to="." method="_on_area_2d_body_exited"]
+[connection signal="timeout" from="AnimationPlayer/Timer" to="." method="_on_timer_timeout"]

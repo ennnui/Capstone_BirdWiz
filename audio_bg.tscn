@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://itxoa8d33inx"]
+
+[ext_resource type="AudioStream" uid="uid://b6egammd2ghxf" path="res://Assets/sounds/D&D BKG music.mp3" id="1_nebnk"]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" unique_id=1054814553]
+stream = ExtResource("1_nebnk")
+volume_db = -25.0
+pitch_scale = 1.9
+autoplay = true

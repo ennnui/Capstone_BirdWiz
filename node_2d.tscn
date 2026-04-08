@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://7vasbyfnqlss"]
+
+[ext_resource type="Texture2D" uid="uid://bhjxq4tjs16n5" path="res://66667.jpg" id="1_wtcfe"]
+
+[node name="character" type="Node2D" unique_id=1402878411]
+
+[node name="66667" type="Sprite2D" parent="." unique_id=488542789]
+position = Vector2(122.00001, 126.00001)
+scale = Vector2(3.4571428, 3.5857143)
+texture = ExtResource("1_wtcfe")
