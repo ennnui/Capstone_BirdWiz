@@ -51,6 +51,18 @@ func _physics_process(delta):
 
 	move_and_slide()
 
+
+
+const potion = preload (\"res://potion.tscn\")
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	
+	if Input.is_action_just_pressed(\"fire\"):
+		var potion_instance = potion.instantiate()
+		get_tree().root.add_child(potion_instance)
+		potion_instance.global_position = global_position
+		potion_instance.rotation = global_position.angle_to_point(get_global_mouse_position())
 		
 "
 
@@ -189,15 +201,15 @@ animations = [{
 script = SubResource("GDScript_gfdyp")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=1891853261]
-position = Vector2(247.5, 248)
+position = Vector2(1.5, 2)
 shape = SubResource("RectangleShape2D_u2e7j")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D" unique_id=1119046925]
-position = Vector2(244.5, 248.5)
+position = Vector2(-1.5, 2.5)
 scale = Vector2(5.5625, 5.5625)
 sprite_frames = SubResource("SpriteFrames_xphr6")
 animation = &"idle"
 autoplay = "idle"
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D" unique_id=41876210]
-position = Vector2(579, 179)
+position = Vector2(-4, 1)

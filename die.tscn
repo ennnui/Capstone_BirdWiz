@@ -31,6 +31,12 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_muu1c")
 
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1415405000]
+layout_mode = 0
+offset_right = 1149.0
+offset_bottom = 647.0
+color = Color(0.07058824, 0.09803922, 0.10980392, 1)
+
 [node name="PanelContainer" type="PanelContainer" parent="." unique_id=237347190]
 layout_mode = 1
 anchors_preset = 8

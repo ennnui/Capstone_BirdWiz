@@ -1,10 +1,12 @@
-Sprite2D
 Area2D
+CollisionShape2D
+Timer
+ColorRect
+Sprite2D
 AnimatedSprite2D
 AnimatableBody2D
 AnimationPlayer
 AnimationTree
-CollisionShape2D
 ParallaxBackground
 ParallaxLayer
 StaticBody2D
