@@ -19,12 +19,12 @@ func _ready():
 
 func _process(delta: float) -> void:
 	proximity_player = area_top.overlaps_body(player) and area_bot.overlaps_body(player)
-	print("area_bot detection: ", area_bot.overlaps_body(player))
-	print(proximity_player)
+	#print("area_bot detection: ", area_bot.overlaps_body(player))
+	#print(proximity_player)
 	
 	if proximity_player and player_alive:
 		get_tree().change_scene_to_file("res://die.tscn")
-		print("player_is_dead") 
+		#print("player_is_dead") 
 		player_alive = false
 
 
