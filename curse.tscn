@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://v1j15p5c1rn0"]
+
+[ext_resource type="Texture2D" uid="uid://bbxwbygj31jr1" path="res://icon.svg" id="1_jspm0"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_jspm0"]
+radius = 44.92511
+height = 113.144745
+
+[node name="curse" type="Area2D" unique_id=1593987422 groups=["curse"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=655548793]
+position = Vector2(1.6638937, -1.6638923)
+shape = SubResource("CapsuleShape2D_jspm0")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=137898286]
+position = Vector2(1, 1.0000153)
+scale = Vector2(0.42968753, 0.42134407)
+texture = ExtResource("1_jspm0")
