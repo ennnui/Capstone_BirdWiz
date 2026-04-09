@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://vixcj3cka5w4"]
+
+[ext_resource type="Texture2D" uid="uid://cbh2dqbd62dqt" path="res://Assets/Thrust/Thrusts 1 SpriteSheet.png" id="1_7ly8f"]
+
+[node name="cleaning" type="Node2D" unique_id=1543617024]
+
+[node name="Area2D" type="Area2D" parent="." unique_id=943600760]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=210541448]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Area2D/CollisionShape2D" unique_id=739783252]
+position = Vector2(5, 53)
+
+[node name="Thrusts1SpriteSheet" type="Sprite2D" parent="Area2D" unique_id=1281691139]
+position = Vector2(5, 53)
+texture = ExtResource("1_7ly8f")

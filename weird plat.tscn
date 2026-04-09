@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://d2xhqcxr41sij"]
 
-[ext_resource type="Texture2D" uid="uid://d1tsy68gif1lm" path="res://Assets/broken plat.png" id="1_m0kvr"]
+[ext_resource type="Texture2D" uid="uid://63tbvvsc4li" path="res://Assets/platforms/broken plat.png" id="1_m0kvr"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_m0kvr"]
 size = Vector2(15.878302, 6.6934566)

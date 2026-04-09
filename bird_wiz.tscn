@@ -201,4 +201,3 @@ autoplay = "idle"
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D" unique_id=41876210]
 position = Vector2(579, 179)
-offset = Vector2(50, 0)

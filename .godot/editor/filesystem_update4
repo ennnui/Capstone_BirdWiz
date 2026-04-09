@@ -1,0 +1,25 @@
+res://the_beginning.tscn
+res://bird_wiz.tscn
+res://stat_plat_for_parallax.tscn
+res://area_2d.gd
+res://audio_bg.gd
+res://character_body_2d.gd
+res://collision_shape_2d.gd
+res://die.gd
+res://gameplay instructions.tscn
+res://killbox.gd
+res://path_2d.gd
+res://platformer_stat.tscn
+res://platform_moving.tscn
+res://portal.gd
+res://portal_revised.gd
+res://portal_revised.tscn
+res://rotating_platform.tscn
+res://static plat circle.tscn
+res://teeth.gd
+res://teeth.tscn
+res://tub.gd
+res://tub_2.tscn
+res://weird plat.tscn
+res://win.gd
+res://cleaning.tscn

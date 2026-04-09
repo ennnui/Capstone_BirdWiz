@@ -1,0 +1,46 @@
+[gd_scene format=3 uid="uid://iu5q35x8smb0"]
+
+[ext_resource type="Texture2D" uid="uid://bgqm78hkpwt6d" path="res://Assets/platforms/start point stat.png" id="1_xwvid"]
+
+[node name="Node2D" type="Node2D" unique_id=1962264462]
+position = Vector2(-16, 0)
+
+[node name="StartPointStat2" type="Sprite2D" parent="." unique_id=1562603482]
+position = Vector2(77.999985, 65.999985)
+scale = Vector2(4.825, 4.825)
+texture = ExtResource("1_xwvid")
+
+[node name="StartPointStat3" type="Sprite2D" parent="." unique_id=388927541]
+position = Vector2(230, 65.999985)
+scale = Vector2(4.825, 4.825)
+texture = ExtResource("1_xwvid")
+
+[node name="StartPointStat4" type="Sprite2D" parent="." unique_id=312942922]
+position = Vector2(382, 65.999985)
+scale = Vector2(4.825, 4.825)
+texture = ExtResource("1_xwvid")
+
+[node name="StartPointStat5" type="Sprite2D" parent="." unique_id=1077753635]
+position = Vector2(535, 65.999985)
+scale = Vector2(4.825, 4.825)
+texture = ExtResource("1_xwvid")
+
+[node name="StartPointStat6" type="Sprite2D" parent="." unique_id=1032463559]
+position = Vector2(684, 65.999985)
+scale = Vector2(4.825, 4.825)
+texture = ExtResource("1_xwvid")
+
+[node name="StartPointStat7" type="Sprite2D" parent="." unique_id=125327456]
+position = Vector2(834, 65.999985)
+scale = Vector2(4.825, 4.825)
+texture = ExtResource("1_xwvid")
+
+[node name="StartPointStat8" type="Sprite2D" parent="." unique_id=880150429]
+position = Vector2(988, 65.999985)
+scale = Vector2(4.825, 4.825)
+texture = ExtResource("1_xwvid")
+
+[node name="StartPointStat9" type="Sprite2D" parent="." unique_id=548163188]
+position = Vector2(1141, 65.999985)
+scale = Vector2(4.825, 4.825)
+texture = ExtResource("1_xwvid")

@@ -25,6 +25,7 @@ AudioBg="*uid://itxoa8d33inx"
 
 [display]
 
+window/stretch/mode="viewport"
 window/default_bus_layout="res://default_bus_layout.tres"
 
 [global_group]
