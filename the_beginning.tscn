@@ -25,7 +25,7 @@ size = Vector2(1219, 22)
 [node name="layer1" type="ParallaxLayer" parent="ParallaxBackground" unique_id=485871957]
 position = Vector2(-517, -335)
 scale = Vector2(1.2423308, 1.2423308)
-motion_mirroring = Vector2(740, 0)
+motion_mirroring = Vector2(748.6, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/layer1" unique_id=1670403160]
 position = Vector2(464, 396.25)
@@ -35,7 +35,7 @@ texture = ExtResource("1_ehpd7")
 [node name="layer2" type="ParallaxLayer" parent="ParallaxBackground" unique_id=1672415814]
 position = Vector2(-517, -335)
 scale = Vector2(1.2423308, 1.2423308)
-motion_mirroring = Vector2(740, 0)
+motion_mirroring = Vector2(748.6, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/layer2" unique_id=1648745144]
 position = Vector2(464, 396.25)
@@ -45,7 +45,7 @@ texture = ExtResource("2_x7bfv")
 [node name="layer3" type="ParallaxLayer" parent="ParallaxBackground" unique_id=664601796]
 position = Vector2(-517, -335)
 scale = Vector2(1.2423308, 1.2423308)
-motion_mirroring = Vector2(740, 0)
+motion_mirroring = Vector2(748.6, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/layer3" unique_id=1273197134]
 position = Vector2(464.5, 397.25)
@@ -55,7 +55,7 @@ texture = ExtResource("3_05oq6")
 [node name="layer4" type="ParallaxLayer" parent="ParallaxBackground" unique_id=512262497]
 position = Vector2(-517, -335)
 scale = Vector2(1.2423308, 1.2423308)
-motion_mirroring = Vector2(740, 0)
+motion_mirroring = Vector2(748.6, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/layer4" unique_id=151417768]
 position = Vector2(465, 396.75)
@@ -65,7 +65,7 @@ texture = ExtResource("4_xfvoc")
 [node name="layer5" type="ParallaxLayer" parent="ParallaxBackground" unique_id=588838069]
 position = Vector2(-517, -335)
 scale = Vector2(1.2423308, 1.2423308)
-motion_mirroring = Vector2(740, 0)
+motion_mirroring = Vector2(748.6, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/layer5" unique_id=294018431]
 position = Vector2(465, 396.75)
@@ -75,7 +75,7 @@ texture = ExtResource("5_n477j")
 [node name="layer6" type="ParallaxLayer" parent="ParallaxBackground" unique_id=418145418]
 position = Vector2(-517, -335)
 scale = Vector2(1.2423308, 1.2423308)
-motion_mirroring = Vector2(740, 0)
+motion_mirroring = Vector2(748.6, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/layer6" unique_id=811141800]
 position = Vector2(465, 396.75)
@@ -85,7 +85,7 @@ texture = ExtResource("6_bq3te")
 [node name="layer7" type="ParallaxLayer" parent="ParallaxBackground" unique_id=480584199]
 position = Vector2(-517, -335)
 scale = Vector2(1.2423308, 1.2423308)
-motion_mirroring = Vector2(740, 0)
+motion_mirroring = Vector2(748.6, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/layer7" unique_id=322735469]
 position = Vector2(465, 396.75)
@@ -95,7 +95,7 @@ texture = ExtResource("7_bxixq")
 [node name="layer8" type="ParallaxLayer" parent="ParallaxBackground" unique_id=298237726]
 position = Vector2(-517, -335)
 scale = Vector2(1.2423308, 1.2423308)
-motion_mirroring = Vector2(740, 0)
+motion_mirroring = Vector2(748.6, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/layer8" unique_id=861568603]
 position = Vector2(465, 396.75)
@@ -105,7 +105,7 @@ texture = ExtResource("8_ktyr8")
 [node name="layer9" type="ParallaxLayer" parent="ParallaxBackground" unique_id=124015888]
 position = Vector2(-517, -335)
 scale = Vector2(1.2423308, 1.2423308)
-motion_mirroring = Vector2(740, 0)
+motion_mirroring = Vector2(748.6, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/layer9" unique_id=1212056652]
 position = Vector2(465, 396.75)
@@ -115,7 +115,7 @@ texture = ExtResource("9_msiip")
 [node name="layer10" type="ParallaxLayer" parent="ParallaxBackground" unique_id=510260122]
 position = Vector2(-517, -335)
 scale = Vector2(1.2423308, 1.2423308)
-motion_mirroring = Vector2(740, 0)
+motion_mirroring = Vector2(748.6, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/layer10" unique_id=1751155241]
 position = Vector2(465, 396.75)
@@ -125,7 +125,7 @@ texture = ExtResource("10_hmdr2")
 [node name="layer11" type="ParallaxLayer" parent="ParallaxBackground" unique_id=1968137865]
 position = Vector2(-517, -335)
 scale = Vector2(1.2423308, 1.2423308)
-motion_mirroring = Vector2(740, 0)
+motion_mirroring = Vector2(748.6, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/layer11" unique_id=886658013]
 position = Vector2(465, 396.75)
@@ -135,7 +135,7 @@ texture = ExtResource("11_ggvil")
 [node name="layer12" type="ParallaxLayer" parent="ParallaxBackground" unique_id=44984419]
 position = Vector2(-517, -335)
 scale = Vector2(1.2423308, 1.2423308)
-motion_mirroring = Vector2(740, 0)
+motion_mirroring = Vector2(748.6, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/layer12" unique_id=269642761]
 position = Vector2(465, 396.75)
@@ -145,15 +145,6 @@ texture = ExtResource("12_wxbbu")
 [node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground" unique_id=422103504]
 position = Vector2(-34, 335)
 motion_mirroring = Vector2(1220, 0)
-
-[node name="StartPointStat2" parent="ParallaxBackground/ParallaxLayer" unique_id=1562603482 instance=ExtResource("15_bq3te")]
-position = Vector2(0, 0)
-
-[node name="StaticBody2D" type="StaticBody2D" parent="ParallaxBackground/ParallaxLayer/StartPointStat2" unique_id=83736194]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="ParallaxBackground/ParallaxLayer/StartPointStat2/StaticBody2D" unique_id=321080412]
-position = Vector2(604, 9)
-shape = SubResource("RectangleShape2D_n477j")
 
 [node name="bird wiz" parent="ParallaxBackground" unique_id=865072794 instance=ExtResource("14_n477j")]
 z_index = 1
@@ -176,3 +167,12 @@ offset_bottom = 1433.0
 color = Color(0.043137256, 0.06666667, 0.13333334, 1)
 
 [node name="ParallaxBackground2" type="ParallaxBackground" parent="." unique_id=2037762700]
+
+[node name="StartPointStat2" parent="." unique_id=1562603482 instance=ExtResource("15_bq3te")]
+position = Vector2(-34, 335)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="StartPointStat2" unique_id=83736194]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StartPointStat2/StaticBody2D" unique_id=321080412]
+position = Vector2(604, 9)
+shape = SubResource("RectangleShape2D_n477j")
