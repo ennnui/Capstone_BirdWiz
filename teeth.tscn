@@ -184,6 +184,7 @@ polygon = PackedVector2Array(345, 87, 321, 77, 314, 73, 281, 88, 254, 56, 201, 2
 
 [node name="Area2D" parent="OpenMouthTop/curses" unique_id=1593987422 instance=ExtResource("3_m30r6")]
 position = Vector2(-124.79201, -18.302828)
+scale = Vector2(1.4658902, 1.4620456)
 
 [node name="OpenMouthBot" type="Sprite2D" parent="." unique_id=2140333923]
 position = Vector2(560, 503)
@@ -208,10 +209,12 @@ position = Vector2(595, 151)
 rotation = 3.1415925
 polygon = PackedVector2Array(293.99997, 86.00418, 280.99997, 96.00418, 262.99997, 75.00418, 235.99997, 78.00418, 216.99997, 65.00418, 201.99997, 75.00418, 158.99997, 43.00418, 115.99997, 49.00418, 58, 40.00415, 12, 41.00415, -30, 40.00415, -47, 53.00415, -80, 48.00415, -103, 60.00415, -131, 84.00415, -142, 72.00415, -169, 87.00415, -196, 81.00415, -202.00006, 104.00415, -211.00006, 107.00415, -219.00006, 103.00415, -217, 77.00415, -193, 42.00415, -141, -8.99585, -13, -78.99585, 76, -74.99585, 207.99997, -12.995819, 263.99997, 43.00418)
 
-[node name="curses" type="Node2D" parent="OpenMouthBot" unique_id=913748431]
+[node name="curses2" type="Node2D" parent="OpenMouthBot" unique_id=448918413]
+position = Vector2(-1.6638794, -608.985)
 
-[node name="Area2D2" parent="OpenMouthBot/curses" unique_id=934211786 instance=ExtResource("3_m30r6")]
-position = Vector2(86.52246, 39.93341)
+[node name="Area2D" parent="OpenMouthBot/curses2" unique_id=1635548889 instance=ExtResource("3_m30r6")]
+position = Vector2(84.85857, 648.91833)
+scale = Vector2(1.4658902, 1.4620456)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=842878224]
 callback_mode_process = 0
