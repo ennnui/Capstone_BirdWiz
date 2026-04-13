@@ -1,3 +1,5 @@
+CharacterBody2D
+AnimationPlayer
 Node2D
 Parallax2D
 CollisionShape2D
@@ -7,7 +9,6 @@ Timer
 ColorRect
 AnimatedSprite2D
 AnimatableBody2D
-AnimationPlayer
 AnimationTree
 ParallaxBackground
 ParallaxLayer

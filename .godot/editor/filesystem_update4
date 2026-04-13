@@ -1,5 +1,5 @@
-res://the_beginning.tscn
-res://potion.tscn
-res://Assets/curse_asset1.png
 res://curse.tscn
-res://teeth.tscn
+res://spell.tscn
+res://bird_wiz.tscn
+res://spell.gd
+res://lvl.tscn

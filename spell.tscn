@@ -1,0 +1,139 @@
+[gd_scene format=3 uid="uid://ehor6isd40v3"]
+
+[ext_resource type="Script" uid="uid://djbslwbe1sn6o" path="res://spell.gd" id="1_35i8j"]
+[ext_resource type="Texture2D" uid="uid://b63wsjv1j8bii" path="res://Assets/Thrust/cleaned spell/spell1.png" id="2_x50df"]
+[ext_resource type="Texture2D" uid="uid://cl0kka3ck25sy" path="res://Assets/Thrust/cleaned spell/spell2.png" id="3_755rm"]
+[ext_resource type="Texture2D" uid="uid://dbgmurx171gp3" path="res://Assets/Thrust/cleaned spell/explosionspell1.png" id="3_u0s3u"]
+[ext_resource type="Texture2D" uid="uid://do52cfh57f5cn" path="res://Assets/Thrust/cleaned spell/spell3.png" id="4_qkfvy"]
+[ext_resource type="Texture2D" uid="uid://c857v6ug0nwx6" path="res://Assets/Thrust/cleaned spell/spell4.png" id="5_pdwch"]
+[ext_resource type="Texture2D" uid="uid://c2wojperpx8hi" path="res://Assets/Thrust/cleaned spell/spell5.png" id="6_lf7hh"]
+[ext_resource type="Texture2D" uid="uid://dadms05e6s7ag" path="res://Assets/Thrust/cleaned spell/explosionspell2.png" id="8_jtsd7"]
+[ext_resource type="Texture2D" uid="uid://btpqciw4kgh31" path="res://Assets/Thrust/cleaned spell/explosionspell3.png" id="9_0sxfa"]
+[ext_resource type="Texture2D" uid="uid://qpwa3yqy1khj" path="res://Assets/Thrust/cleaned spell/explosionspell4.png" id="10_wyqx4"]
+[ext_resource type="Texture2D" uid="uid://b4n2fwpevyc4x" path="res://Assets/Thrust/cleaned spell/explosionspell5.png" id="11_shstk"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bcips"]
+size = Vector2(52, 13)
+
+[sub_resource type="Animation" id="Animation_u0s3u"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("spell_fired/Spell1:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("2_x50df")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("spell_fired/Explosionspell1:texture")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("3_u0s3u")]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("spell_fired/Spell1:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-18, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_jtsd7"]
+resource_name = "spell_animation"
+length = 0.4
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("spell_fired/Spell1:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.100000024, 0.2, 0.3, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("2_x50df"), ExtResource("3_755rm"), ExtResource("4_qkfvy"), ExtResource("5_pdwch"), ExtResource("6_lf7hh")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("spell_fired/Explosionspell1:texture")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("3_u0s3u"), ExtResource("8_jtsd7"), ExtResource("9_0sxfa"), ExtResource("10_wyqx4"), ExtResource("11_shstk")]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("spell_fired/Spell1:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-18, 0), Vector2(0, 0), Vector2(7, 0), Vector2(14, 0), Vector2(16, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_0sxfa"]
+_data = {
+&"RESET": SubResource("Animation_u0s3u"),
+&"spell_animation": SubResource("Animation_jtsd7")
+}
+
+[node name="spell" type="Node2D" unique_id=1143714058]
+script = ExtResource("1_35i8j")
+
+[node name="spell_fired" type="Area2D" parent="." unique_id=1953065429]
+
+[node name="ColorRect" type="ColorRect" parent="spell_fired" unique_id=812345287]
+visible = false
+offset_left = -20.0
+offset_top = -3.0
+offset_right = 20.0
+offset_bottom = 3.0
+color = Color(0.6862745, 0.09019608, 0.24705882, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="spell_fired" unique_id=2137471864]
+scale = Vector2(1.82, 1.82)
+shape = SubResource("RectangleShape2D_bcips")
+
+[node name="Spell1" type="Sprite2D" parent="spell_fired" unique_id=1599553769]
+position = Vector2(-18, 0)
+scale = Vector2(1.82, 1.82)
+texture = ExtResource("2_x50df")
+
+[node name="Explosionspell1" type="Sprite2D" parent="spell_fired" unique_id=289311732]
+scale = Vector2(1.82, 1.82)
+texture = ExtResource("3_u0s3u")
+
+[node name="Timer" type="Timer" parent="." unique_id=1417833825]
+wait_time = 2.0
+one_shot = true
+autostart = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=760575719]
+libraries/ = SubResource("AnimationLibrary_0sxfa")
+
+[connection signal="area_entered" from="spell_fired" to="." method="_on_area_2d_area_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
