@@ -1,16 +1,20 @@
 [gd_scene format=3 uid="uid://cmy40vwnydqiy"]
 
-[ext_resource type="Texture2D" uid="uid://b6p5y71cefkry" path="res://Assets/portal.png" id="1_0r486"]
+[ext_resource type="Script" uid="uid://cu2lay8eioiqu" path="res://area_2d.gd" id="1_ef3v5"]
+[ext_resource type="Texture2D" uid="uid://b6p5y71cefkry" path="res://Assets/portal.png" id="2_grrij"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_kfp6p"]
-size = Vector2(14.311456, 14.723297)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bymwi"]
+size = Vector2(108, 144)
 
-[node name="Portal" type="Sprite2D" unique_id=1560437116]
-scale = Vector2(9.712499, 9.712499)
-texture = ExtResource("1_0r486")
+[node name="portal" type="Area2D" unique_id=659579274]
+script = ExtResource("1_ef3v5")
 
-[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1060166306]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1042610916]
+position = Vector2(55, 24)
+shape = SubResource("RectangleShape2D_bymwi")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1009819724]
-position = Vector2(-0.5662813, -2.522522)
-shape = SubResource("RectangleShape2D_kfp6p")
+[node name="Portal" type="Sprite2D" parent="." unique_id=1655801392]
+position = Vector2(45.000004, 48)
+scale = Vector2(9.89375, 9.89375)
+texture = ExtResource("2_grrij")
+flip_h = true

@@ -14,6 +14,7 @@ position = Vector2(55, 24)
 shape = SubResource("RectangleShape2D_bymwi")
 
 [node name="Portal" type="Sprite2D" parent="." unique_id=1655801392]
-position = Vector2(60.000015, 48)
+position = Vector2(45.000004, 48)
 scale = Vector2(9.89375, 9.89375)
 texture = ExtResource("1_tb63m")
+flip_h = true

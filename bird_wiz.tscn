@@ -213,3 +213,4 @@ autoplay = "idle"
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D" unique_id=41876210]
 position = Vector2(-4, 1)
+zoom = Vector2(0.615, 0.615)

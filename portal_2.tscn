@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://b7dicbh2ub0xu"]
+
+[ext_resource type="Texture2D" uid="uid://b6p5y71cefkry" path="res://Assets/portal.png" id="1_5i01k"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_peb1k"]
+size = Vector2(121, 144)
+
+[node name="portal2" type="Area2D" unique_id=1979264221]
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="." unique_id=1185854980]
+position = Vector2(47.5, 24)
+shape = SubResource("RectangleShape2D_peb1k")
+
+[node name="Portal2" type="Sprite2D" parent="." unique_id=1113614490]
+position = Vector2(45.000004, 48)
+scale = Vector2(9.89375, 9.89375)
+texture = ExtResource("1_5i01k")

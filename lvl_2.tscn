@@ -1,0 +1,49 @@
+[gd_scene format=3 uid="uid://7y5k7ka7jptf"]
+
+[ext_resource type="PackedScene" uid="uid://d0pmk23cb40rd" path="res://platformer_stat.tscn" id="1_dbx23"]
+[ext_resource type="PackedScene" uid="uid://cbro7qol3bvoh" path="res://bird_wiz.tscn" id="1_tu4c3"]
+[ext_resource type="PackedScene" uid="uid://yjcs7pr38s30" path="res://portal_revised.tscn" id="2_1v3ac"]
+[ext_resource type="PackedScene" uid="uid://df3672npsubkr" path="res://mushroom.tscn" id="2_tu4c3"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_1v3ac"]
+
+[node name="Node2D" type="Node2D" unique_id=874263600]
+
+[node name="bkg" type="ColorRect" parent="." unique_id=1218077564]
+offset_left = -176.0
+offset_top = -1663.0
+offset_right = 6683.0
+offset_bottom = 2494.0
+color = Color(0.23108168, 0.1363, 0.29, 1)
+
+[node name="portal" parent="." unique_id=659579274 instance=ExtResource("2_1v3ac")]
+position = Vector2(32, 330)
+
+[node name="bird wiz" parent="." unique_id=865072794 instance=ExtResource("1_tu4c3")]
+position = Vector2(233, 380)
+
+[node name="Platformer Stat4" parent="." unique_id=1799891836 instance=ExtResource("1_dbx23")]
+position = Vector2(473, 404)
+
+[node name="Platformer Stat2" parent="." unique_id=1330272824 instance=ExtResource("1_dbx23")]
+position = Vector2(266, 404)
+
+[node name="Platformer Stat3" parent="." unique_id=725797520 instance=ExtResource("1_dbx23")]
+position = Vector2(680, 404)
+
+[node name="Platformer Stat" parent="." unique_id=1127965578 instance=ExtResource("1_dbx23")]
+position = Vector2(59, 404)
+
+[node name="Platformer Stat-endleft" parent="." unique_id=1009796177 instance=ExtResource("1_dbx23")]
+position = Vector2(-148, 404)
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="Platformer Stat-endleft" unique_id=1555301060]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platformer Stat-endleft/StaticBody2D2" unique_id=3421299]
+position = Vector2(147, 31)
+rotation = 1.5707964
+shape = SubResource("WorldBoundaryShape2D_1v3ac")
+
+[node name="mushroom" parent="." unique_id=2083485353 instance=ExtResource("2_tu4c3")]
+position = Vector2(754.99994, 396)
+scale = Vector2(4.24, 4.24)

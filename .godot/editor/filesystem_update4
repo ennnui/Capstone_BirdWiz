@@ -1,5 +1,13 @@
-res://curse.tscn
-res://spell.tscn
-res://bird_wiz.tscn
-res://spell.gd
+res://teeth.tscn
 res://lvl.tscn
+res://rotating_platform.tscn
+res://area_2d.gd
+res://curse.gd
+res://curse.tscn
+res://portal2.gd
+res://spell.gd
+res://portal_revised.tscn
+res://lvl_2.tscn
+res://portal.tscn
+res://portal_2.tscn
+res://portal_2.gd

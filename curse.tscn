@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://v1j15p5c1rn0"]
 
+[ext_resource type="Script" uid="uid://cbhyco3r7pigj" path="res://curse.gd" id="1_dswov"]
 [ext_resource type="Texture2D" uid="uid://i2uo5t13uc3n" path="res://Assets/curse_asset2.png" id="1_jspm0"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_jspm0"]
@@ -7,6 +8,7 @@ radius = 44.92511
 height = 113.144745
 
 [node name="curse" type="Area2D" unique_id=1593987422 groups=["curse"]]
+script = ExtResource("1_dswov")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=655548793]
 position = Vector2(1.6638937, -1.6638923)
@@ -16,3 +18,5 @@ shape = SubResource("CapsuleShape2D_jspm0")
 position = Vector2(0.9999981, 0)
 scale = Vector2(4.8125, 4.8125)
 texture = ExtResource("1_jspm0")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]

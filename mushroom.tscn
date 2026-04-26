@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://df3672npsubkr"]
+
+[ext_resource type="Texture2D" uid="uid://6i6qq710phyi" path="res://Assets/mushroom.png" id="1_gvsd5"]
+[ext_resource type="Script" uid="uid://lw47u1377g1c" path="res://area_2d_mushroom.gd" id="2_ke5i0"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ke5i0"]
+size = Vector2(6, 14)
+
+[node name="mushroom" type="Node2D" unique_id=2083485353]
+
+[node name="Area2D" type="Area2D" parent="." unique_id=214973193]
+script = ExtResource("2_ke5i0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1607871248]
+shape = SubResource("RectangleShape2D_ke5i0")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=14537277]
+texture = ExtResource("1_gvsd5")
+
+[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
