@@ -8,7 +8,6 @@
 [ext_resource type="PackedScene" uid="uid://c5lxcgbu25loa" path="res://gameplay instructions.tscn" id="5_bmf8x"]
 [ext_resource type="PackedScene" uid="uid://k8fdej2ee7rl" path="res://platform_moving.tscn" id="6_7rxco"]
 [ext_resource type="PackedScene" uid="uid://dnnn1htmdu6ha" path="res://static plat circle.tscn" id="7_beans"]
-[ext_resource type="PackedScene" uid="uid://dp54jgb0dht4c" path="res://static_plat.tscn" id="9_tmnqu"]
 [ext_resource type="Script" uid="uid://hib4tlpk0bvy" path="res://killbox_lvl_2.gd" id="10_tmnqu"]
 [ext_resource type="PackedScene" uid="uid://u3gygp0ov28k" path="res://portal_3.tscn" id="10_vbeg1"]
 
@@ -186,14 +185,6 @@ scale = Vector2(2.190633, 2.190633)
 [node name="static plat circle8" parent="." unique_id=994369272 instance=ExtResource("7_beans")]
 position = Vector2(3670, 187)
 scale = Vector2(2.190633, 2.190633)
-
-[node name="static plat" parent="static plat circle8" unique_id=364755349 instance=ExtResource("9_tmnqu")]
-position = Vector2(381.62476, 25.563385)
-scale = Vector2(0.505, 0.505)
-
-[node name="static plat3" parent="static plat circle8" unique_id=1142389325 instance=ExtResource("9_tmnqu")]
-position = Vector2(523.1365, 25.563385)
-scale = Vector2(0.505, 0.505)
 
 [node name="Path2D4" parent="." unique_id=297122102 instance=ExtResource("6_7rxco")]
 position = Vector2(926, -52.999996)
