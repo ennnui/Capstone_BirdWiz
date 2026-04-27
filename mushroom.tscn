@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://lw47u1377g1c" path="res://area_2d_mushroom.gd" id="2_ke5i0"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ke5i0"]
-size = Vector2(6, 14)
+size = Vector2(4, 14)
 
 [node name="mushroom" type="Node2D" unique_id=2083485353]
 

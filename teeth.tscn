@@ -71,7 +71,7 @@ tracks/4/keys = {
 
 [sub_resource type="Animation" id="Animation_m30r6"]
 resource_name = "open_close"
-length = 5.0666666
+length = 8.033334
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -184,8 +184,7 @@ polygon = PackedVector2Array(345, 87, 321, 77, 314, 73, 281, 88, 254, 56, 201, 2
 [node name="curses" type="Node2D" parent="OpenMouthTop" unique_id=1192223479]
 
 [node name="Area2D" parent="OpenMouthTop/curses" unique_id=1593987422 instance=ExtResource("3_m30r6")]
-position = Vector2(-124.79201, -18.302828)
-scale = Vector2(1.4658902, 1.4620456)
+position = Vector2(-122.28411, -20.569576)
 
 [node name="OpenMouthBot" type="Sprite2D" parent="." unique_id=2140333923]
 position = Vector2(560, 503)
@@ -212,9 +211,12 @@ polygon = PackedVector2Array(293.99997, 86.00418, 280.99997, 96.00418, 262.99997
 [node name="curses2" type="Node2D" parent="OpenMouthBot" unique_id=448918413]
 position = Vector2(-1.6638794, -608.985)
 
+[node name="Area2D2" parent="OpenMouthBot/curses2" unique_id=1328981473 instance=ExtResource("3_m30r6")]
+position = Vector2(-262.1477, 599.1705)
+rotation = -3.3004177
+
 [node name="Area2D" parent="OpenMouthBot/curses2" unique_id=1635548889 instance=ExtResource("3_m30r6")]
 position = Vector2(84.85857, 648.91833)
-scale = Vector2(1.4658902, 1.4620456)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=842878224]
 callback_mode_process = 0

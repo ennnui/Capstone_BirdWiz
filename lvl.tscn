@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://c5lxcgbu25loa" path="res://gameplay instructions.tscn" id="7_f2dqo"]
 [ext_resource type="PackedScene" uid="uid://bvps70ore51r" path="res://rotating_platform.tscn" id="8_5ud41"]
 [ext_resource type="PackedScene" uid="uid://dnnn1htmdu6ha" path="res://static plat circle.tscn" id="8_kfp6p"]
+[ext_resource type="PackedScene" uid="uid://v1j15p5c1rn0" path="res://curse.tscn" id="10_8ud87"]
 [ext_resource type="PackedScene" uid="uid://yjcs7pr38s30" path="res://portal_revised.tscn" id="10_stq4b"]
 [ext_resource type="PackedScene" uid="uid://b7dicbh2ub0xu" path="res://portal_2.tscn" id="11_dqmf8"]
 [ext_resource type="Script" uid="uid://dhu64nvp2m352" path="res://portal_2.gd" id="12_8ud87"]
@@ -58,6 +59,7 @@ curve = SubResource("Curve2D_5ud41")
 position = Vector2(1675.0001, -6.000004)
 scale = Vector2(0.84, 0.838)
 curve = SubResource("Curve2D_kfp6p")
+speed = 3.0
 
 [node name="Path2D3" parent="." unique_id=899127022 instance=ExtResource("3_4iw1c")]
 position = Vector2(460.0001, 970)
@@ -76,33 +78,42 @@ offset_bottom = 239.0
 text = "WASD or arrows to walk & jump"
 
 [node name="Label2" parent="." unique_id=2068730833 instance=ExtResource("7_f2dqo")]
-offset_left = 1051.0001
-offset_top = -84.00003
-offset_right = 1933.0002
-offset_bottom = -7.0000305
-text = "retrieve potion juice
-and make it back to the portal"
+offset_left = 700.0
+offset_top = -77.0
+offset_right = 1582.0001
+offset_bottom = 0.0
+text = "left click to fire 
+your cleaning spell"
+horizontal_alignment = 1
+
+[node name="Label2" parent="Label2" unique_id=306348073 instance=ExtResource("7_f2dqo")]
+layout_mode = 0
+offset_left = 610.0
+offset_top = -49.0
+offset_right = 1492.0001
+offset_bottom = 28.0
+text = "aim to clean these curses..."
 horizontal_alignment = 1
 
 [node name="Label3" parent="." unique_id=1331050598 instance=ExtResource("7_f2dqo")]
-offset_left = 1964.0002
-offset_top = 400.00003
-offset_right = 2413.0002
-offset_bottom = 477.00003
+offset_left = 1963.0
+offset_top = 578.0
+offset_right = 2412.0
+offset_bottom = 655.0
 text = "oh, and.... don't get bit!"
 horizontal_alignment = 1
 
 [node name="Label4" parent="." unique_id=1898415996 instance=ExtResource("7_f2dqo")]
-offset_left = 4072.0
-offset_top = -341.0
-offset_right = 4521.0
-offset_bottom = -264.0
-text = "now, enter the  portal"
+offset_left = 4147.0
+offset_top = -149.0
+offset_right = 4596.0
+offset_bottom = -72.0
+text = "your job isn't over yet..."
 horizontal_alignment = 1
 
 [node name="bird wiz" parent="." unique_id=443955831 instance=ExtResource("2_4iw1c")]
 z_index = 1
-position = Vector2(1917, 254)
+position = Vector2(62, 492)
 
 [node name="AudioListener2D" type="AudioListener2D" parent="bird wiz" unique_id=1212625771]
 position = Vector2(246.00859, 246.42087)
@@ -180,6 +191,21 @@ position = Vector2(264.00003, 475.99997)
 
 [node name="portal" parent="." unique_id=2126923682 instance=ExtResource("10_stq4b")]
 position = Vector2(-138, 466)
+
+[node name="curse" parent="." unique_id=1593987422 instance=ExtResource("10_8ud87")]
+position = Vector2(1604, -19)
+rotation = -0.12740904
+scale = Vector2(1.11, 1.11)
+
+[node name="curse2" parent="." unique_id=1077191046 instance=ExtResource("10_8ud87")]
+position = Vector2(1728.0001, -19)
+rotation = -0.12740904
+scale = Vector2(1.11, 1.11)
+
+[node name="curse3" parent="." unique_id=1479807542 instance=ExtResource("10_8ud87")]
+position = Vector2(1854.9999, -19)
+rotation = -0.12740904
+scale = Vector2(1.11, 1.11)
 
 [node name="teeth" parent="." unique_id=862176840 instance=ExtResource("1_f2dqo")]
 position = Vector2(1968, -355)

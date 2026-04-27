@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://dp54jgb0dht4c"]
+
+[ext_resource type="Texture2D" uid="uid://ejte40tcpw36" path="res://Assets/platforms/8_x_32.png" id="1_8vpta"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_l2m3b"]
+size = Vector2(24, 90)
+
+[node name="static plat" type="StaticBody2D" unique_id=364755349]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=544060227]
+position = Vector2(-2, 11)
+rotation = 1.5707964
+shape = SubResource("RectangleShape2D_l2m3b")
+
+[node name="8X32" type="Sprite2D" parent="." unique_id=1013831006]
+position = Vector2(-0.9999695, 11)
+rotation = 1.5707964
+scale = Vector2(2.8901348, 2.8901348)
+texture = ExtResource("1_8vpta")

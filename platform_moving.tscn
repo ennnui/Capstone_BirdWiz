@@ -3,14 +3,21 @@
 [ext_resource type="Script" uid="uid://dr7c4dawwkips" path="res://path_2d.gd" id="1_ed145"]
 [ext_resource type="Texture2D" uid="uid://ejte40tcpw36" path="res://Assets/platforms/8_x_32.png" id="2_ed145"]
 
+[sub_resource type="Curve2D" id="Curve2D_ed145"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 0.495, 0.165)
+}
+point_count = 1
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_edtjm"]
 size = Vector2(24, 90)
 
 [node name="Path2D" type="Path2D" unique_id=1315880157]
+curve = SubResource("Curve2D_ed145")
 script = ExtResource("1_ed145")
 
 [node name="PathFollow2D" type="PathFollow2D" parent="." unique_id=680881561]
-position = Vector2(326, 429)
+position = Vector2(3, 1)
 rotation = 1.5707964
 rotates = false
 
@@ -18,7 +25,7 @@ rotates = false
 remote_path = NodePath("../../AnimatableBody2D")
 
 [node name="AnimatableBody2D" type="AnimatableBody2D" parent="." unique_id=982674620]
-position = Vector2(326, 429)
+position = Vector2(3, 1)
 rotation = 1.5707964
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatableBody2D" unique_id=492555766]
