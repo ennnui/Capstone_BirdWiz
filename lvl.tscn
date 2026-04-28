@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://b6nfdqpeuo2ec"]
 
+[ext_resource type="Texture2D" uid="uid://dwsx7unkpn2xu" path="res://Assets/monster pxlart.png" id="1_0paeb"]
 [ext_resource type="PackedScene" uid="uid://bh2gujcwc1eiy" path="res://teeth.tscn" id="1_f2dqo"]
 [ext_resource type="PackedScene" uid="uid://d0pmk23cb40rd" path="res://platformer_stat.tscn" id="1_xliyy"]
 [ext_resource type="PackedScene" uid="uid://cbro7qol3bvoh" path="res://bird_wiz.tscn" id="2_4iw1c"]
@@ -49,6 +50,11 @@ offset_right = 4912.0
 offset_bottom = 2513.0
 color = Color(0.02745098, 0.09411765, 0.12941177, 1)
 metadata/_edit_lock_ = true
+
+[node name="MonsterPxlart" type="Sprite2D" parent="." unique_id=1257217431]
+position = Vector2(2109, 545)
+scale = Vector2(13.945976, 13.945974)
+texture = ExtResource("1_0paeb")
 
 [node name="Path2D2" parent="." unique_id=1315880157 instance=ExtResource("3_4iw1c")]
 position = Vector2(654.99994, -95.00001)
@@ -113,7 +119,7 @@ horizontal_alignment = 1
 
 [node name="bird wiz" parent="." unique_id=443955831 instance=ExtResource("2_4iw1c")]
 z_index = 1
-position = Vector2(62, 492)
+position = Vector2(67, 470)
 
 [node name="AudioListener2D" type="AudioListener2D" parent="bird wiz" unique_id=1212625771]
 position = Vector2(246.00859, 246.42087)
