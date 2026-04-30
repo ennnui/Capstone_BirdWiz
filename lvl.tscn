@@ -48,12 +48,11 @@ offset_left = -2656.0
 offset_top = -1951.0
 offset_right = 4912.0
 offset_bottom = 2513.0
-color = Color(0.02745098, 0.09411765, 0.12941177, 1)
-metadata/_edit_lock_ = true
+color = Color(0.039215688, 0.06666667, 0.12941177, 1)
 
 [node name="MonsterPxlart" type="Sprite2D" parent="." unique_id=1257217431]
-position = Vector2(2109, 545)
-scale = Vector2(13.945976, 13.945974)
+position = Vector2(2105, 325.00003)
+scale = Vector2(8.074683, 8.074681)
 texture = ExtResource("1_0paeb")
 
 [node name="Path2D2" parent="." unique_id=1315880157 instance=ExtResource("3_4iw1c")]
@@ -78,16 +77,16 @@ scale = Vector2(1.785, 1.785)
 
 [node name="Label" parent="." unique_id=738944035 instance=ExtResource("7_f2dqo")]
 offset_left = -52.99997
-offset_top = 198.0
+offset_top = -1784.0
 offset_right = 448.00003
-offset_bottom = 239.0
+offset_bottom = -1743.0
 text = "WASD or arrows to walk & jump"
 
 [node name="Label2" parent="." unique_id=2068730833 instance=ExtResource("7_f2dqo")]
 offset_left = 700.0
-offset_top = -77.0
+offset_top = -2059.0
 offset_right = 1582.0001
-offset_bottom = 0.0
+offset_bottom = -1982.0
 text = "left click to fire 
 your cleaning spell"
 horizontal_alignment = 1
@@ -103,9 +102,9 @@ horizontal_alignment = 1
 
 [node name="Label3" parent="." unique_id=1331050598 instance=ExtResource("7_f2dqo")]
 offset_left = 1963.0
-offset_top = 578.0
+offset_top = -1404.0
 offset_right = 2412.0
-offset_bottom = 655.0
+offset_bottom = -1327.0
 text = "oh, and.... don't get bit!"
 horizontal_alignment = 1
 
