@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://bldcfi27aglu8" path="res://open mouth bot.png" id="2_rbxf8"]
 [ext_resource type="PackedScene" uid="uid://v1j15p5c1rn0" path="res://curse.tscn" id="3_m30r6"]
 [ext_resource type="AudioStream" uid="uid://ckxoy6r3fuijt" path="res://Assets/sounds/rawr.mp3" id="4_nhvtx"]
+[ext_resource type="PackedScene" uid="uid://chq4a3a7p516b" path="res://vision_curse.tscn" id="6_whnn1"]
 
 [sub_resource type="Animation" id="Animation_nhvtx"]
 length = 8.0
@@ -227,6 +228,10 @@ libraries/ = SubResource("AnimationLibrary_whnn1")
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=845962301]
 max_distance = 1000.0
 attenuation = 2.6390142
+
+[node name="vision_curse" parent="." unique_id=513166064 instance=ExtResource("6_whnn1")]
+position = Vector2(703.8648, 89.37199)
+scale = Vector2(3.0289855, 3.0289855)
 
 [connection signal="body_entered" from="OpenMouthTop/Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="OpenMouthTop/Area2D" to="." method="_on_area_2d_body_exited"]

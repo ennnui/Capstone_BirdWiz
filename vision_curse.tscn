@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://chq4a3a7p516b"]
+
+[ext_resource type="Script" uid="uid://bkueovrwpj5t6" path="res://vision_curse.gd" id="1_88hsl"]
+[ext_resource type="Texture2D" uid="uid://bw4x3jgokuf37" path="res://Assets/curse_asset_eye.png" id="1_jmmn7"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_88hsl"]
+radius = 9.0
+
+[node name="vision_curse" type="Area2D" unique_id=513166064 groups=["curse"]]
+script = ExtResource("1_88hsl")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1767928268]
+shape = SubResource("CircleShape2D_88hsl")
+
+[node name="CurseAssetEye" type="Sprite2D" parent="." unique_id=1821670627]
+texture = ExtResource("1_jmmn7")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]

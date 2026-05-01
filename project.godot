@@ -32,6 +32,7 @@ window/default_bus_layout="res://default_bus_layout.tres"
 
 player=""
 curse=""
+bad_curse="curses that do not affect player's ability to move onto next lvl"
 
 [input]
 

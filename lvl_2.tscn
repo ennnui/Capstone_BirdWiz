@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://dnnn1htmdu6ha" path="res://static plat circle.tscn" id="7_beans"]
 [ext_resource type="Script" uid="uid://hib4tlpk0bvy" path="res://killbox_lvl_2.gd" id="10_tmnqu"]
 [ext_resource type="PackedScene" uid="uid://u3gygp0ov28k" path="res://portal_3.tscn" id="10_vbeg1"]
+[ext_resource type="Texture2D" uid="uid://d38nnhv13jhsr" path="res://Assets/curse_asset_snowflake.png" id="11_vbeg1"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_1v3ac"]
 
@@ -40,10 +41,6 @@ metadata/_edit_lock_ = true
 
 [node name="portal" parent="." unique_id=659579274 instance=ExtResource("2_1v3ac")]
 position = Vector2(32, 330)
-
-[node name="teeth_2" parent="." unique_id=440487622 instance=ExtResource("3_7rxco")]
-position = Vector2(5848.9995, -602)
-scale = Vector2(1.97, 1.97)
 
 [node name="bird wiz" parent="." unique_id=865072794 instance=ExtResource("1_tu4c3")]
 position = Vector2(208, 373)
@@ -219,5 +216,13 @@ script = ExtResource("10_tmnqu")
 position = Vector2(3921.6655, 632.4143)
 scale = Vector2(1.94792, 2.9054)
 shape = SubResource("WorldBoundaryShape2D_beans")
+
+[node name="CurseAssetSnowflake" type="Sprite2D" parent="." unique_id=1991338984]
+position = Vector2(4415, 357)
+scale = Vector2(5.5624876, 5.5624876)
+texture = ExtResource("11_vbeg1")
+
+[node name="teeth_2" parent="." unique_id=440487622 instance=ExtResource("3_7rxco")]
+position = Vector2(1367.0001, -8)
 
 [connection signal="body_entered" from="killbox_lvl2" to="killbox_lvl2" method="_on_body_entered"]

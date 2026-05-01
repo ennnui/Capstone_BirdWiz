@@ -13,6 +13,8 @@
 [ext_resource type="PackedScene" uid="uid://yjcs7pr38s30" path="res://portal_revised.tscn" id="10_stq4b"]
 [ext_resource type="PackedScene" uid="uid://b7dicbh2ub0xu" path="res://portal_2.tscn" id="11_dqmf8"]
 [ext_resource type="Script" uid="uid://dhu64nvp2m352" path="res://portal_2.gd" id="12_8ud87"]
+[ext_resource type="Texture2D" uid="uid://d38nnhv13jhsr" path="res://Assets/curse_asset_snowflake.png" id="16_heypf"]
+[ext_resource type="Texture2D" uid="uid://dto580nng1gd1" path="res://Assets/curse_asset_snowflake2.png" id="17_2j74v"]
 [ext_resource type="PackedScene" uid="uid://d2xhqcxr41sij" path="res://weird plat.tscn" id="58_xj1nr"]
 
 [sub_resource type="Curve2D" id="Curve2D_5ud41"]
@@ -118,7 +120,7 @@ horizontal_alignment = 1
 
 [node name="bird wiz" parent="." unique_id=443955831 instance=ExtResource("2_4iw1c")]
 z_index = 1
-position = Vector2(67, 470)
+position = Vector2(3810, 104)
 
 [node name="AudioListener2D" type="AudioListener2D" parent="bird wiz" unique_id=1212625771]
 position = Vector2(246.00859, 246.42087)
@@ -169,7 +171,7 @@ shape = SubResource("WorldBoundaryShape2D_2a1lc")
 position = Vector2(3557, 205)
 scale = Vector2(0.9387033, 1.0238976)
 curve = SubResource("Curve2D_f2dqo")
-speed = 4.0
+speed = 3.0
 
 [node name="note (delete later)" type="Label" parent="." unique_id=770990330]
 offset_right = 40.0
@@ -218,6 +220,16 @@ position = Vector2(1968, -355)
 [node name="portal_2" parent="." unique_id=1979264221 instance=ExtResource("11_dqmf8")]
 position = Vector2(4417, 52)
 script = ExtResource("12_8ud87")
+
+[node name="CurseAssetSnowflake" type="Sprite2D" parent="." unique_id=1535153440]
+position = Vector2(3829, -303)
+scale = Vector2(7.9375005, 7.9375005)
+texture = ExtResource("16_heypf")
+
+[node name="CurseAssetSnowflake2" type="Sprite2D" parent="." unique_id=1076306195]
+position = Vector2(3970, -306.99997)
+scale = Vector2(7.5624924, 7.5624924)
+texture = ExtResource("17_2j74v")
 
 [connection signal="body_entered" from="killbox" to="killbox" method="_on_body_entered"]
 [connection signal="body_entered" from="portal_2" to="portal_2" method="_on_body_entered"]
