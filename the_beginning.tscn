@@ -14,6 +14,8 @@
 [ext_resource type="Texture2D" uid="uid://bvgmpnctrdrxf" path="res://Assets/pixel_forest_layers/Layer_0000_9.png" id="12_wxbbu"]
 [ext_resource type="PackedScene" uid="uid://cbro7qol3bvoh" path="res://bird_wiz.tscn" id="14_n477j"]
 [ext_resource type="PackedScene" uid="uid://iu5q35x8smb0" path="res://stat_plat_for_parallax.tscn" id="15_bq3te"]
+[ext_resource type="PackedScene" uid="uid://dcnoo8kqj6ckm" path="res://scroll.tscn" id="15_bxixq"]
+[ext_resource type="PackedScene" uid="uid://cmy40vwnydqiy" path="res://portal.tscn" id="16_bxixq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_n477j"]
 size = Vector2(1219, 22)
@@ -166,8 +168,14 @@ shape = SubResource("RectangleShape2D_n477j")
 [node name="bird wiz" parent="." unique_id=865072794 instance=ExtResource("14_n477j")]
 z_index = 1
 position = Vector2(193.99998, 163.99998)
-scale = Vector2(0.5705796, 0.5705796)
 
 [node name="AudioListener2D" type="AudioListener2D" parent="bird wiz" unique_id=286541849]
 position = Vector2(246.00859, 246.42087)
 scale = Vector2(0.9959863, 0.99765563)
+
+[node name="scroll" parent="." unique_id=1237053920 instance=ExtResource("15_bxixq")]
+position = Vector2(1205, 515)
+scale = Vector2(2.23, 2.23)
+
+[node name="portal" parent="." unique_id=659579274 instance=ExtResource("16_bxixq")]
+position = Vector2(2328, 510)
