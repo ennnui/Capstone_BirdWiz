@@ -1,1 +1,7 @@
 res://lvl.tscn
+res://opened_scroll.tscn
+res://scroll.gd
+res://toggle_scroll.gd
+res://scroll.tscn
+res://the_beginning.tscn
+res://opened_scroll.gd
