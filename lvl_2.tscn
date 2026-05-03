@@ -11,6 +11,7 @@
 [ext_resource type="Script" uid="uid://hib4tlpk0bvy" path="res://killbox_lvl_2.gd" id="10_tmnqu"]
 [ext_resource type="PackedScene" uid="uid://u3gygp0ov28k" path="res://portal_3.tscn" id="10_vbeg1"]
 [ext_resource type="Texture2D" uid="uid://d38nnhv13jhsr" path="res://Assets/curse_asset_snowflake.png" id="11_vbeg1"]
+[ext_resource type="Shader" uid="uid://bhhs3t72e84eh" path="res://blur_effect.gdshader" id="12_22vjt"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_1v3ac"]
 
@@ -28,6 +29,9 @@ point_count = 3
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_beans"]
 distance = -19.193848
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_t0ydl"]
+shader = ExtResource("12_22vjt")
 
 [node name="Node2D" type="Node2D" unique_id=874263600]
 
@@ -224,5 +228,12 @@ texture = ExtResource("11_vbeg1")
 
 [node name="teeth_2" parent="." unique_id=440487622 instance=ExtResource("3_7rxco")]
 position = Vector2(1367.0001, -8)
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=75557358]
+material = SubResource("ShaderMaterial_t0ydl")
+offset_left = -172.0
+offset_top = -1666.0
+offset_right = 6887.0
+offset_bottom = 2767.0
 
 [connection signal="body_entered" from="killbox_lvl2" to="killbox_lvl2" method="_on_body_entered"]

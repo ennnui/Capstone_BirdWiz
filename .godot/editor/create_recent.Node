@@ -1,3 +1,5 @@
+ColorRect
+WorldEnvironment
 CollisionShape2D
 Area2D
 StaticBody2D
@@ -5,10 +7,8 @@ CollisionPolygon2D
 AnimatableBody2D
 Sprite2D
 Node2D
-ColorRect
 CharacterBody2D
 AnimationPlayer
 Parallax2D
 Timer
 AnimatedSprite2D
-AnimationTree

@@ -17,6 +17,6 @@ func _on_timer_timeout() -> void:
 
 func _on_area_2d_area_entered(area: Area2D) -> void:
 	print(area)
-	if area.is_in_group("curse"):
+	if area.is_in_group("curse") or area.is_in_group("bad_curse"):
 		area.queue_free()
 		queue_free()
