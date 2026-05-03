@@ -11,6 +11,7 @@
 [ext_resource type="Script" uid="uid://hib4tlpk0bvy" path="res://killbox_lvl_2.gd" id="10_tmnqu"]
 [ext_resource type="PackedScene" uid="uid://u3gygp0ov28k" path="res://portal_3.tscn" id="10_vbeg1"]
 [ext_resource type="Texture2D" uid="uid://d38nnhv13jhsr" path="res://Assets/curse_asset_snowflake.png" id="11_vbeg1"]
+[ext_resource type="PackedScene" uid="uid://pf467fi618sg" path="res://vision_effect_full_screen.tscn" id="12_t0ydl"]
 [ext_resource type="PackedScene" uid="uid://chq4a3a7p516b" path="res://vision_curse.tscn" id="13_t0ydl"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_1v3ac"]
@@ -143,13 +144,6 @@ offset_right = 3907.0
 offset_bottom = -221.0
 text = "this one needs some real cleaning..."
 
-[node name="Label" parent="." unique_id=1744571737 instance=ExtResource("5_bmf8x")]
-offset_left = 712.0
-offset_top = 15.0
-offset_right = 1264.0
-offset_bottom = 56.0
-text = "watch out for poisonous plants! "
-
 [node name="Path2D5" parent="." unique_id=1315880157 instance=ExtResource("6_7rxco")]
 position = Vector2(3478, -177.99998)
 scale = Vector2(0.975, 0.972)
@@ -239,6 +233,10 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+color = Color(1, 1, 1, 0)
+
+[node name="vision_effect_full_screen" parent="CanvasLayer/ColorRect" unique_id=1490763850 instance=ExtResource("12_t0ydl")]
+position = Vector2(-14, 28)
 
 [node name="vision_curse" parent="." unique_id=513166064 instance=ExtResource("13_t0ydl")]
 position = Vector2(864, -27.999939)

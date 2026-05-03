@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cjmefhyam2bj3"]
 
 [ext_resource type="Texture2D" uid="uid://bf6ayylu756qf" path="res://Assets/scroll opened.png" id="1_ol1dc"]
-[ext_resource type="Script" uid="uid://dcty0ikfmuh3g" path="res://opened_scroll.gd" id="1_r2ojj"]
+[ext_resource type="Script" path="res://opened_scroll.gd" id="1_r2ojj"]
 [ext_resource type="FontFile" uid="uid://nm7mtm5iymm7" path="res://Assets/monogram/ttf/monogram.ttf" id="2_xc7ts"]
 [ext_resource type="Texture2D" uid="uid://i2uo5t13uc3n" path="res://Assets/curse_asset2.png" id="3_r2ojj"]
 [ext_resource type="Texture2D" uid="uid://bw4x3jgokuf37" path="res://Assets/curse_asset_eye.png" id="4_i0e2t"]
@@ -16,7 +16,6 @@ font_size = 36
 font_color = Color(0.15294118, 0.15294118, 0.15294118, 1)
 
 [node name="opened_scroll" type="Control" unique_id=925162582]
-visible = false
 layout_mode = 3
 anchors_preset = 0
 script = ExtResource("1_r2ojj")
