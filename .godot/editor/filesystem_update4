@@ -3,3 +3,4 @@ res://spell.gd
 res://vision_curse.tscn
 res://lvl_2.tscn
 res://blur_effect.gdshader
+res://vision_curse.gd
