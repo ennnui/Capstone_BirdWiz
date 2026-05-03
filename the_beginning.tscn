@@ -174,7 +174,7 @@ position = Vector2(246.00859, 246.42087)
 scale = Vector2(0.9959863, 0.99765563)
 
 [node name="scroll" parent="." unique_id=1237053920 instance=ExtResource("15_bxixq")]
-position = Vector2(1205, 515)
+position = Vector2(1208.9999, 508)
 scale = Vector2(2.23, 2.23)
 
 [node name="portal" parent="." unique_id=659579274 instance=ExtResource("16_bxixq")]
