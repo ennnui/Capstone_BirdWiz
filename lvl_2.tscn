@@ -11,7 +11,8 @@
 [ext_resource type="Script" uid="uid://hib4tlpk0bvy" path="res://killbox_lvl_2.gd" id="10_tmnqu"]
 [ext_resource type="PackedScene" uid="uid://u3gygp0ov28k" path="res://portal_3.tscn" id="10_vbeg1"]
 [ext_resource type="Texture2D" uid="uid://d38nnhv13jhsr" path="res://Assets/curse_asset_snowflake.png" id="11_vbeg1"]
-[ext_resource type="Shader" uid="uid://bhhs3t72e84eh" path="res://blur_effect.gdshader" id="12_22vjt"]
+[ext_resource type="PackedScene" uid="uid://pf467fi618sg" path="res://vision_effect_full_screen.tscn" id="12_t0ydl"]
+[ext_resource type="PackedScene" uid="uid://chq4a3a7p516b" path="res://vision_curse.tscn" id="13_t0ydl"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_1v3ac"]
 
@@ -30,9 +31,6 @@ point_count = 3
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_beans"]
 distance = -19.193848
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_t0ydl"]
-shader = ExtResource("12_22vjt")
-
 [node name="Node2D" type="Node2D" unique_id=874263600]
 
 [node name="bkg" type="ColorRect" parent="." unique_id=1218077564]
@@ -49,112 +47,95 @@ position = Vector2(32, 330)
 [node name="bird wiz" parent="." unique_id=865072794 instance=ExtResource("1_tu4c3")]
 position = Vector2(208, 373)
 
-[node name="Platformer Stat6" parent="." unique_id=1799891836 instance=ExtResource("1_dbx23")]
+[node name="platforms" type="Node2D" parent="." unique_id=712724980]
+
+[node name="Platformer Stat6" parent="platforms" unique_id=1799891836 instance=ExtResource("1_dbx23")]
 position = Vector2(1928, 96)
 
-[node name="Platformer Stat8" parent="." unique_id=137615569 instance=ExtResource("1_dbx23")]
+[node name="Platformer Stat8" parent="platforms" unique_id=137615569 instance=ExtResource("1_dbx23")]
 position = Vector2(2342, 96)
 
-[node name="Platformer Stat13" parent="." unique_id=496448961 instance=ExtResource("1_dbx23")]
+[node name="Platformer Stat13" parent="platforms" unique_id=496448961 instance=ExtResource("1_dbx23")]
 position = Vector2(2549, 96)
 
-[node name="Platformer Stat15" parent="." unique_id=309322657 instance=ExtResource("1_dbx23")]
+[node name="Platformer Stat15" parent="platforms" unique_id=309322657 instance=ExtResource("1_dbx23")]
 position = Vector2(2757, 96)
 
-[node name="Platformer Stat16" parent="." unique_id=1791764186 instance=ExtResource("1_dbx23")]
+[node name="Platformer Stat16" parent="platforms" unique_id=1791764186 instance=ExtResource("1_dbx23")]
 position = Vector2(2965, 96)
 
-[node name="Platformer Stat7" parent="." unique_id=1078181947 instance=ExtResource("1_dbx23")]
+[node name="Platformer Stat7" parent="platforms" unique_id=1078181947 instance=ExtResource("1_dbx23")]
 position = Vector2(2135, 96)
 
-[node name="Platformer Stat4" parent="." unique_id=1371736270 instance=ExtResource("1_dbx23")]
+[node name="Platformer Stat4" parent="platforms" unique_id=1371736270 instance=ExtResource("1_dbx23")]
 position = Vector2(473, 404)
 
-[node name="Platformer Stat2" parent="." unique_id=1330272824 instance=ExtResource("1_dbx23")]
+[node name="Platformer Stat2" parent="platforms" unique_id=1330272824 instance=ExtResource("1_dbx23")]
 position = Vector2(266, 404)
 
-[node name="Platformer Stat5" parent="." unique_id=115772090 instance=ExtResource("1_dbx23")]
+[node name="Platformer Stat5" parent="platforms" unique_id=115772090 instance=ExtResource("1_dbx23")]
 position = Vector2(1554, 402)
 
-[node name="Platformer Stat3" parent="." unique_id=725797520 instance=ExtResource("1_dbx23")]
+[node name="Platformer Stat3" parent="platforms" unique_id=725797520 instance=ExtResource("1_dbx23")]
 position = Vector2(1346, 402)
 
-[node name="Platformer Stat" parent="." unique_id=1127965578 instance=ExtResource("1_dbx23")]
+[node name="Platformer Stat" parent="platforms" unique_id=1127965578 instance=ExtResource("1_dbx23")]
 position = Vector2(59, 404)
 
-[node name="Platformer Stat-endleft" parent="." unique_id=1009796177 instance=ExtResource("1_dbx23")]
+[node name="Platformer Stat-endleft" parent="platforms" unique_id=1009796177 instance=ExtResource("1_dbx23")]
 position = Vector2(-148, 404)
 
-[node name="StaticBody2D2" type="StaticBody2D" parent="Platformer Stat-endleft" unique_id=1555301060]
+[node name="StaticBody2D2" type="StaticBody2D" parent="platforms/Platformer Stat-endleft" unique_id=1555301060]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Platformer Stat-endleft/StaticBody2D2" unique_id=3421299]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="platforms/Platformer Stat-endleft/StaticBody2D2" unique_id=3421299]
 position = Vector2(147, 31)
 rotation = 1.5707964
 shape = SubResource("WorldBoundaryShape2D_1v3ac")
 
-[node name="mushroom" parent="." unique_id=2083485353 instance=ExtResource("2_tu4c3")]
-position = Vector2(1557, 394)
-scale = Vector2(4.24, 4.24)
+[node name="Platformer Stat9" parent="platforms" unique_id=1132645749 instance=ExtResource("1_dbx23")]
+position = Vector2(2450, -97)
+rotation = 3.1415925
 
-[node name="mushroom2" parent="." unique_id=1895354969 instance=ExtResource("2_tu4c3")]
-position = Vector2(2198, 88)
-scale = Vector2(4.24, 4.24)
+[node name="Platformer Stat10" parent="platforms" unique_id=1065841812 instance=ExtResource("1_dbx23")]
+position = Vector2(2243, -97)
+rotation = 3.1415925
 
-[node name="mushroom3" parent="." unique_id=223731495 instance=ExtResource("2_tu4c3")]
-position = Vector2(2546.9998, 88)
-scale = Vector2(4.24, 4.24)
+[node name="Platformer Stat12" parent="platforms" unique_id=1042867370 instance=ExtResource("1_dbx23")]
+position = Vector2(2036, -97)
+rotation = 3.1415925
 
-[node name="Platformer Stat18" parent="." unique_id=800714567 instance=ExtResource("1_dbx23")]
+[node name="Platformer Stat11" parent="platforms" unique_id=392177916 instance=ExtResource("1_dbx23")]
+position = Vector2(2651, -97)
+rotation = 3.1415925
+
+[node name="Platformer Stat14" parent="platforms" unique_id=439752787 instance=ExtResource("1_dbx23")]
+position = Vector2(2858, -97)
+rotation = 3.1415925
+
+[node name="Platformer Stat17" parent="platforms" unique_id=1211272213 instance=ExtResource("1_dbx23")]
+position = Vector2(3065, -97)
+rotation = 3.1415925
+
+[node name="Platformer Stat18" parent="platforms" unique_id=800714567 instance=ExtResource("1_dbx23")]
 position = Vector2(5154, 241)
 
-[node name="Platformer Stat19" parent="." unique_id=931907645 instance=ExtResource("1_dbx23")]
+[node name="Platformer Stat19" parent="platforms" unique_id=931907645 instance=ExtResource("1_dbx23")]
 position = Vector2(5361, 241)
 
-[node name="Platformer Stat20" parent="." unique_id=1733839114 instance=ExtResource("1_dbx23")]
+[node name="Platformer Stat20" parent="platforms" unique_id=1733839114 instance=ExtResource("1_dbx23")]
 position = Vector2(5568, 241)
 
-[node name="mushroom7" parent="." unique_id=1581672566 instance=ExtResource("2_tu4c3")]
-position = Vector2(2927, 88)
-scale = Vector2(4.24, 4.24)
+[node name="static plat circle6" parent="platforms" unique_id=278953358 instance=ExtResource("7_beans")]
+position = Vector2(3318, 100)
+scale = Vector2(2.190633, 2.190633)
 
-[node name="Platformer Stat9" parent="." unique_id=1132645749 instance=ExtResource("1_dbx23")]
-position = Vector2(2450, -97)
-rotation = -3.1415927
+[node name="static plat circle7" parent="platforms" unique_id=1293174729 instance=ExtResource("7_beans")]
+position = Vector2(3501.0002, 149.00002)
+scale = Vector2(2.190633, 2.190633)
 
-[node name="Platformer Stat10" parent="." unique_id=1065841812 instance=ExtResource("1_dbx23")]
-position = Vector2(2243, -97)
-rotation = -3.1415927
-
-[node name="Platformer Stat12" parent="." unique_id=1042867370 instance=ExtResource("1_dbx23")]
-position = Vector2(2036, -97)
-rotation = -3.1415927
-
-[node name="Platformer Stat11" parent="." unique_id=392177916 instance=ExtResource("1_dbx23")]
-position = Vector2(2651, -97)
-rotation = -3.1415927
-
-[node name="Platformer Stat14" parent="." unique_id=439752787 instance=ExtResource("1_dbx23")]
-position = Vector2(2858, -97)
-rotation = -3.1415927
-
-[node name="Platformer Stat17" parent="." unique_id=1211272213 instance=ExtResource("1_dbx23")]
-position = Vector2(3065, -97)
-rotation = -3.1415927
-
-[node name="mushroom4" parent="." unique_id=198079436 instance=ExtResource("2_tu4c3")]
-position = Vector2(2376.9998, -89)
-rotation = -3.1415927
-scale = Vector2(4.24, 4.24)
-
-[node name="mushroom6" parent="." unique_id=1746706404 instance=ExtResource("2_tu4c3")]
-position = Vector2(2028, -89)
-rotation = -3.1415927
-scale = Vector2(4.24, 4.24)
-
-[node name="mushroom5" parent="." unique_id=1566503724 instance=ExtResource("2_tu4c3")]
-position = Vector2(2736, -89)
-rotation = -3.1415927
-scale = Vector2(4.24, 4.24)
+[node name="static plat circle8" parent="platforms" unique_id=994369272 instance=ExtResource("7_beans")]
+position = Vector2(3670, 187)
+scale = Vector2(2.190633, 2.190633)
 
 [node name="Label2" parent="." unique_id=738944035 instance=ExtResource("5_bmf8x")]
 offset_left = 3286.0
@@ -163,29 +144,10 @@ offset_right = 3907.0
 offset_bottom = -221.0
 text = "this one needs some real cleaning..."
 
-[node name="Label" parent="." unique_id=1744571737 instance=ExtResource("5_bmf8x")]
-offset_left = 712.0
-offset_top = 15.0
-offset_right = 1264.0
-offset_bottom = 56.0
-text = "watch out for poisonous plants! "
-
 [node name="Path2D5" parent="." unique_id=1315880157 instance=ExtResource("6_7rxco")]
 position = Vector2(3478, -177.99998)
 scale = Vector2(0.975, 0.972)
 curve = SubResource("Curve2D_beans")
-
-[node name="static plat circle6" parent="." unique_id=278953358 instance=ExtResource("7_beans")]
-position = Vector2(3318, 100)
-scale = Vector2(2.190633, 2.190633)
-
-[node name="static plat circle7" parent="." unique_id=1293174729 instance=ExtResource("7_beans")]
-position = Vector2(3501.0002, 149.00002)
-scale = Vector2(2.190633, 2.190633)
-
-[node name="static plat circle8" parent="." unique_id=994369272 instance=ExtResource("7_beans")]
-position = Vector2(3670, 187)
-scale = Vector2(2.190633, 2.190633)
 
 [node name="Path2D4" parent="." unique_id=297122102 instance=ExtResource("6_7rxco")]
 position = Vector2(926, -52.999996)
@@ -211,6 +173,39 @@ curve = SubResource("Curve2D_bmf8x")
 [node name="portal_3" parent="." unique_id=377927095 instance=ExtResource("10_vbeg1")]
 position = Vector2(5641, 165)
 
+[node name="mushrooms" type="Node2D" parent="." unique_id=1606047409]
+
+[node name="mushroom" parent="mushrooms" unique_id=2083485353 instance=ExtResource("2_tu4c3")]
+position = Vector2(1557, 394)
+scale = Vector2(4.24, 4.24)
+
+[node name="mushroom2" parent="mushrooms" unique_id=1895354969 instance=ExtResource("2_tu4c3")]
+position = Vector2(2198, 88)
+scale = Vector2(4.24, 4.24)
+
+[node name="mushroom3" parent="mushrooms" unique_id=223731495 instance=ExtResource("2_tu4c3")]
+position = Vector2(2546.9998, 88)
+scale = Vector2(4.24, 4.24)
+
+[node name="mushroom7" parent="mushrooms" unique_id=1581672566 instance=ExtResource("2_tu4c3")]
+position = Vector2(2927, 88)
+scale = Vector2(4.24, 4.24)
+
+[node name="mushroom4" parent="mushrooms" unique_id=198079436 instance=ExtResource("2_tu4c3")]
+position = Vector2(2376.9998, -89)
+rotation = 3.1415925
+scale = Vector2(4.24, 4.24)
+
+[node name="mushroom6" parent="mushrooms" unique_id=1746706404 instance=ExtResource("2_tu4c3")]
+position = Vector2(2028, -89)
+rotation = 3.1415925
+scale = Vector2(4.24, 4.24)
+
+[node name="mushroom5" parent="mushrooms" unique_id=1566503724 instance=ExtResource("2_tu4c3")]
+position = Vector2(2736, -89)
+rotation = 3.1415925
+scale = Vector2(4.24, 4.24)
+
 [node name="killbox_lvl2" type="Area2D" parent="." unique_id=591160296]
 position = Vector2(-365.23804, -92.46523)
 scale = Vector2(1.0361, 1.5756525)
@@ -229,11 +224,22 @@ texture = ExtResource("11_vbeg1")
 [node name="teeth_2" parent="." unique_id=440487622 instance=ExtResource("3_7rxco")]
 position = Vector2(1367.0001, -8)
 
-[node name="ColorRect" type="ColorRect" parent="." unique_id=75557358]
-material = SubResource("ShaderMaterial_t0ydl")
-offset_left = -172.0
-offset_top = -1666.0
-offset_right = 6887.0
-offset_bottom = 2767.0
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1073758780]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=2030514975]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(1, 1, 1, 0)
+
+[node name="vision_effect_full_screen" parent="CanvasLayer/ColorRect" unique_id=1490763850 instance=ExtResource("12_t0ydl")]
+position = Vector2(-14, 28)
+
+[node name="vision_curse" parent="." unique_id=513166064 instance=ExtResource("13_t0ydl")]
+position = Vector2(864, -27.999939)
+scale = Vector2(4.76, 4.76)
 
 [connection signal="body_entered" from="killbox_lvl2" to="killbox_lvl2" method="_on_body_entered"]

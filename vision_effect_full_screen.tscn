@@ -1,0 +1,49 @@
+[gd_scene format=3 uid="uid://pf467fi618sg"]
+
+[ext_resource type="PackedScene" uid="uid://ccfrhkra8kcll" path="res://singular_vision_effect.tscn" id="1_eo34i"]
+
+[node name="vision_effect_full_screen" type="Node2D" unique_id=1490763850]
+
+[node name="singular vision_effect" parent="." unique_id=1944099762 instance=ExtResource("1_eo34i")]
+position = Vector2(320, 636)
+scale = Vector2(2.2847981, 2.2800035)
+
+[node name="singular vision_effect2" parent="." unique_id=347623930 instance=ExtResource("1_eo34i")]
+position = Vector2(86, 430.00006)
+rotation = 1.4689447
+scale = Vector2(5.1313205, 5.1313205)
+
+[node name="singular vision_effect3" parent="." unique_id=1271752906 instance=ExtResource("1_eo34i")]
+position = Vector2(1051.0001, 120.00009)
+rotation = -2.1375253
+scale = Vector2(5.383106, 5.383106)
+
+[node name="singular vision_effect4" parent="." unique_id=30413567 instance=ExtResource("1_eo34i")]
+position = Vector2(713, 555.00006)
+rotation = 5.3022237
+scale = Vector2(4.8821764, 4.8821764)
+
+[node name="singular vision_effect5" parent="." unique_id=1133661583 instance=ExtResource("1_eo34i")]
+position = Vector2(192.99998, 79)
+rotation = 0.25121227
+scale = Vector2(3.038598, 3.038598)
+
+[node name="singular vision_effect6" parent="." unique_id=1291384483 instance=ExtResource("1_eo34i")]
+position = Vector2(1020, 532.99994)
+rotation = -2.9978044
+scale = Vector2(1.9266107, 1.9185333)
+
+[node name="singular vision_effect7" parent="." unique_id=1724795181 instance=ExtResource("1_eo34i")]
+position = Vector2(787.99994, 217.99998)
+rotation = 2.1945064
+scale = Vector2(2.7754755, 2.7638392)
+
+[node name="singular vision_effect8" parent="." unique_id=811698612 instance=ExtResource("1_eo34i")]
+position = Vector2(505.00006, 7.0000305)
+rotation = -2.6047997
+scale = Vector2(4.3798285, 4.3798285)
+
+[node name="singular vision_effect9" parent="." unique_id=925250236 instance=ExtResource("1_eo34i")]
+position = Vector2(429, 324.00003)
+rotation = 0.94239074
+scale = Vector2(1.1403022, 1.1355214)

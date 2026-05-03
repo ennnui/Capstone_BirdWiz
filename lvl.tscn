@@ -15,6 +15,7 @@
 [ext_resource type="Script" uid="uid://dhu64nvp2m352" path="res://portal_2.gd" id="12_8ud87"]
 [ext_resource type="Texture2D" uid="uid://d38nnhv13jhsr" path="res://Assets/curse_asset_snowflake.png" id="16_heypf"]
 [ext_resource type="Texture2D" uid="uid://dto580nng1gd1" path="res://Assets/curse_asset_snowflake2.png" id="17_2j74v"]
+[ext_resource type="PackedScene" uid="uid://pf467fi618sg" path="res://vision_effect_full_screen.tscn" id="17_xfunc"]
 [ext_resource type="PackedScene" uid="uid://d2xhqcxr41sij" path="res://weird plat.tscn" id="58_xj1nr"]
 
 [sub_resource type="Curve2D" id="Curve2D_5ud41"]
@@ -230,6 +231,20 @@ texture = ExtResource("16_heypf")
 position = Vector2(3970, -306.99997)
 scale = Vector2(7.5624924, 7.5624924)
 texture = ExtResource("17_2j74v")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=970826373]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=1443087288]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(1, 1, 1, 0)
+
+[node name="vision_effect_full_screen" parent="CanvasLayer/ColorRect" unique_id=1490763850 instance=ExtResource("17_xfunc")]
+position = Vector2(-14, 28)
 
 [connection signal="body_entered" from="killbox" to="killbox" method="_on_body_entered"]
 [connection signal="body_entered" from="portal_2" to="portal_2" method="_on_body_entered"]

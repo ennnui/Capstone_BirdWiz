@@ -1,0 +1,55 @@
+[gd_scene format=3 uid="uid://ccfrhkra8kcll"]
+
+[ext_resource type="Script" uid="uid://bo0wdjtx7d71j" path="res://singular_vision_effect.gd" id="1_cxver"]
+[ext_resource type="Texture2D" uid="uid://bw4x3jgokuf37" path="res://Assets/curse_asset_eye.png" id="1_pbe8o"]
+
+[sub_resource type="Animation" id="Animation_cxver"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../CurseAssetEye:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_4v3lx"]
+resource_name = "vision"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../CurseAssetEye:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 6.2831855]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_3b882"]
+_data = {
+&"RESET": SubResource("Animation_cxver"),
+&"vision": SubResource("Animation_4v3lx")
+}
+
+[node name="singular vision_effect" type="Node2D" unique_id=1944099762]
+script = ExtResource("1_cxver")
+
+[node name="CurseAssetEye" type="Sprite2D" parent="." unique_id=810633588]
+position = Vector2(-4, -2)
+scale = Vector2(4.9375, 4.9375)
+texture = ExtResource("1_pbe8o")
+
+[node name="Timer" type="Timer" parent="." unique_id=1971987171]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1973570747]
+root_node = NodePath("../Timer")
+libraries/ = SubResource("AnimationLibrary_3b882")

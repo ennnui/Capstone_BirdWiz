@@ -1,20 +1,18 @@
 shader_type canvas_item;
 
-uniform sampler2D SCREEN_TEXTURE : hint_screen_texture, filter_linear_mipmap;
-uniform float blur_amount : hint_range(0.0, 5.0) = 1.5;
-
-//void vertex() {
-	// Called for every vertex the material is visible on.
-//}
+uniform float blur_amount : hint_range(0.0, 10.0) = 0.0;
+uniform sampler2D screen_texture : hint_screen_texture, filter_linear_mipmap;
 
 void fragment() {
-	vec3 result = textureLod(SCREEN_TEXTURE, SCREEN_UV, blur_amount).rgb
-	COLOR.rgb = result;
+    vec2 uv = SCREEN_UV;
+    vec4 color = vec4(0.0);
+    float total = 0.0;
+    for (float x = -2.0; x <= 2.0; x++) {
+        for (float y = -2.0; y <= 2.0; y++) {
+            vec2 offset = vec2(x, y) * blur_amount * 0.001;
+            color += texture(screen_texture, uv + offset);
+            total += 1.0;
+        }
+    }
+    COLOR = color / total;
 }
-	// Called for every pixel the material is visible on.
-
-
-//void light() {
-//	// Called for every pixel for every light affecting the CanvasItem.
-//	// Uncomment to replace the default light processing function with this one.
-//}
