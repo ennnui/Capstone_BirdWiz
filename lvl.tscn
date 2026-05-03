@@ -1,9 +1,10 @@
 [gd_scene format=3 uid="uid://b6nfdqpeuo2ec"]
 
-[ext_resource type="Texture2D" uid="uid://dwsx7unkpn2xu" path="res://Assets/monster pxlart.png" id="1_0paeb"]
+[ext_resource type="Texture2D" uid="uid://dgihd1scihyny" path="res://Assets/monster1png.png" id="1_2j74v"]
 [ext_resource type="PackedScene" uid="uid://bh2gujcwc1eiy" path="res://teeth.tscn" id="1_f2dqo"]
 [ext_resource type="PackedScene" uid="uid://d0pmk23cb40rd" path="res://platformer_stat.tscn" id="1_xliyy"]
 [ext_resource type="PackedScene" uid="uid://cbro7qol3bvoh" path="res://bird_wiz.tscn" id="2_4iw1c"]
+[ext_resource type="Texture2D" uid="uid://doblk6st0ey2r" path="res://Assets/monster1mouth.png" id="2_xfunc"]
 [ext_resource type="PackedScene" uid="uid://k8fdej2ee7rl" path="res://platform_moving.tscn" id="3_4iw1c"]
 [ext_resource type="Script" uid="uid://01u0x7bilm4y" path="res://killbox.gd" id="5_k0o5b"]
 [ext_resource type="PackedScene" uid="uid://c5lxcgbu25loa" path="res://gameplay instructions.tscn" id="7_f2dqo"]
@@ -52,11 +53,17 @@ offset_top = -1951.0
 offset_right = 4912.0
 offset_bottom = 2513.0
 color = Color(0.039215688, 0.06666667, 0.12941177, 1)
+metadata/_edit_lock_ = true
 
-[node name="MonsterPxlart" type="Sprite2D" parent="." unique_id=1257217431]
-position = Vector2(2105, 325.00003)
-scale = Vector2(8.074683, 8.074681)
-texture = ExtResource("1_0paeb")
+[node name="Monster1Png" type="Sprite2D" parent="." unique_id=677060845]
+position = Vector2(1796, 428)
+scale = Vector2(17.458694, 17.458685)
+texture = ExtResource("1_2j74v")
+
+[node name="Monster1Mouth" type="Sprite2D" parent="." unique_id=1359688117]
+position = Vector2(3149, 260)
+scale = Vector2(16.839998, 16.839998)
+texture = ExtResource("2_xfunc")
 
 [node name="Path2D2" parent="." unique_id=1315880157 instance=ExtResource("3_4iw1c")]
 position = Vector2(654.99994, -95.00001)
@@ -121,7 +128,7 @@ horizontal_alignment = 1
 
 [node name="bird wiz" parent="." unique_id=443955831 instance=ExtResource("2_4iw1c")]
 z_index = 1
-position = Vector2(3810, 104)
+position = Vector2(1928, 250)
 
 [node name="AudioListener2D" type="AudioListener2D" parent="bird wiz" unique_id=1212625771]
 position = Vector2(246.00859, 246.42087)
