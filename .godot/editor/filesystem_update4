@@ -1,5 +1,9 @@
-res://spell.tscn
-res://spell.gd
-res://vision_curse.tscn
-res://lvl_2.tscn
 res://blur_effect.gdshader
+res://scroll.tscn
+res://portal.tscn
+res://area_2d.gd
+res://the_beginning.tscn
+res://opened_scroll.tscn
+res://gameplay instructions.tscn
+res://scroll.gd
+res://opened_scroll.gd

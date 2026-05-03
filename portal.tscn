@@ -10,11 +10,13 @@ size = Vector2(108, 144)
 script = ExtResource("1_ef3v5")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1042610916]
-position = Vector2(55, 24)
+position = Vector2(-2, -1)
 shape = SubResource("RectangleShape2D_bymwi")
 
 [node name="Portal" type="Sprite2D" parent="." unique_id=1655801392]
-position = Vector2(45.000004, 48)
+position = Vector2(-7.999996, 22)
 scale = Vector2(9.89375, 9.89375)
 texture = ExtResource("2_grrij")
 flip_h = true
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

@@ -1,0 +1,109 @@
+[gd_scene format=3 uid="uid://cjmefhyam2bj3"]
+
+[ext_resource type="Texture2D" uid="uid://bf6ayylu756qf" path="res://Assets/scroll opened.png" id="1_ol1dc"]
+[ext_resource type="Script" uid="uid://dcty0ikfmuh3g" path="res://opened_scroll.gd" id="1_r2ojj"]
+[ext_resource type="FontFile" uid="uid://nm7mtm5iymm7" path="res://Assets/monogram/ttf/monogram.ttf" id="2_xc7ts"]
+[ext_resource type="Texture2D" uid="uid://i2uo5t13uc3n" path="res://Assets/curse_asset2.png" id="3_r2ojj"]
+[ext_resource type="Texture2D" uid="uid://bw4x3jgokuf37" path="res://Assets/curse_asset_eye.png" id="4_i0e2t"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_i0e2t"]
+size = Vector2(1164, 659)
+
+[sub_resource type="LabelSettings" id="LabelSettings_qt7vt"]
+line_spacing = 0.01
+font = ExtResource("2_xc7ts")
+font_size = 36
+font_color = Color(0.15294118, 0.15294118, 0.15294118, 1)
+
+[node name="opened_scroll" type="Control" unique_id=925162582]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_r2ojj")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1426794336]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=816511427]
+position = Vector2(572, 319.5)
+shape = SubResource("RectangleShape2D_i0e2t")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1402569688]
+layout_mode = 0
+offset_left = 1.0
+offset_top = -7.0
+offset_right = 1154.0
+offset_bottom = 650.0
+color = Color(0.043137256, 0.06666667, 0.13333334, 1)
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=82929193]
+position = Vector2(562, 291)
+scale = Vector2(11.879996, 11.879998)
+texture = ExtResource("1_ol1dc")
+
+[node name="Label" type="Label" parent="." unique_id=112400744]
+layout_mode = 0
+offset_left = 242.0
+offset_top = 207.0
+offset_right = 541.0
+offset_bottom = 299.0
+text = "Your task involves 
+cleaning the teeth of 
+underground monsters."
+label_settings = SubResource("LabelSettings_qt7vt")
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Label2" type="Label" parent="." unique_id=1022925978]
+layout_mode = 0
+offset_left = 246.0
+offset_top = 367.0
+offset_right = 545.0
+offset_bottom = 459.0
+text = "Left- click to clean 
+their curses."
+label_settings = SubResource("LabelSettings_qt7vt")
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="CurseAsset3" type="Sprite2D" parent="Label2" unique_id=1442378110]
+position = Vector2(134, 98)
+scale = Vector2(4.0390625, 4.0390625)
+texture = ExtResource("3_r2ojj")
+
+[node name="Label3" type="Label" parent="." unique_id=977439035]
+layout_mode = 0
+offset_left = 601.0
+offset_top = 210.0
+offset_right = 900.0
+offset_bottom = 302.0
+text = "But watch out! 
+Some curses are NOT 
+meant to be cleaned..."
+label_settings = SubResource("LabelSettings_qt7vt")
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="CurseAssetEye" type="Sprite2D" parent="Label3" unique_id=1659990419]
+position = Vector2(136, 123.999985)
+scale = Vector2(3.6328108, 3.6328108)
+texture = ExtResource("4_i0e2t")
+
+[node name="Label4" type="Label" parent="." unique_id=1193270300]
+layout_mode = 0
+offset_left = 655.0
+offset_top = 402.0
+offset_right = 954.0
+offset_bottom = 494.0
+text = "And finally,
+don't get bit!"
+label_settings = SubResource("LabelSettings_qt7vt")
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Line2D" type="Line2D" parent="." unique_id=948036872]
+position = Vector2(565.1686, 459.85034)
+rotation = -3.1415927
+scale = Vector2(0.91383594, -4.3772693)
+points = PackedVector2Array(0.5263158, -57.855072, 0.2567749, 3.460991, 0, 0)
+width = 3.0
+default_color = Color(0.15294118, 0.15294118, 0.15294118, 1)
