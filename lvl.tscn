@@ -72,7 +72,7 @@ curve = SubResource("Curve2D_5ud41")
 position = Vector2(1675.0001, -6.000004)
 scale = Vector2(0.84, 0.838)
 curve = SubResource("Curve2D_kfp6p")
-speed = 3.0
+speed = 3.5
 
 [node name="Path2D3" parent="." unique_id=899127022 instance=ExtResource("3_4iw1c")]
 position = Vector2(460.0001, 970)
@@ -126,7 +126,7 @@ horizontal_alignment = 1
 
 [node name="bird wiz" parent="." unique_id=443955831 instance=ExtResource("2_4iw1c")]
 z_index = 1
-position = Vector2(4228, 99)
+position = Vector2(58, 461)
 
 [node name="AudioListener2D" type="AudioListener2D" parent="bird wiz" unique_id=1212625771]
 position = Vector2(246.00859, 246.42087)
@@ -177,7 +177,7 @@ shape = SubResource("WorldBoundaryShape2D_2a1lc")
 position = Vector2(3565, 205)
 scale = Vector2(0.9387033, 1.0238976)
 curve = SubResource("Curve2D_f2dqo")
-speed = 3.0
+speed = 3.5
 
 [node name="note (delete later)" type="Label" parent="." unique_id=770990330]
 offset_right = 40.0
@@ -192,6 +192,9 @@ position = Vector2(1453, 320)
 
 [node name="static plat circle6" parent="." unique_id=2098611442 instance=ExtResource("8_kfp6p")]
 position = Vector2(1775.0001, 390)
+
+[node name="static plat circle7" parent="." unique_id=278953358 instance=ExtResource("8_kfp6p")]
+position = Vector2(2449, 602)
 
 [node name="static plat circle5" parent="." unique_id=1117544098 instance=ExtResource("8_kfp6p")]
 position = Vector2(1626, 306)

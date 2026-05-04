@@ -4,54 +4,117 @@
 [ext_resource type="PackedScene" uid="uid://v1j15p5c1rn0" path="res://curse.tscn" id="2_6fsnt"]
 [ext_resource type="PackedScene" uid="uid://chq4a3a7p516b" path="res://vision_curse.tscn" id="3_qo4em"]
 
+[sub_resource type="Animation" id="Animation_6fsnt"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Area2D:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatableBody2D:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [6.2831855]
+}
+
+[sub_resource type="Animation" id="Animation_qo4em"]
+resource_name = "area2d spin"
+length = 16.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Area2D:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 15.990653),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [6.283185307179586, -6.2831855]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatableBody2D:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 15.990653),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [6.2831855, -6.2831855]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ss4ny"]
+_data = {
+&"RESET": SubResource("Animation_6fsnt"),
+&"area2d spin": SubResource("Animation_qo4em")
+}
+
 [node name="teeth_spiral" type="Node2D" unique_id=705743824]
 
 [node name="AnimatableBody2D" type="AnimatableBody2D" parent="." unique_id=1297449525]
 position = Vector2(0, 1)
+rotation = 6.2831855
 
 [node name="Monster2Mouth" type="Sprite2D" parent="AnimatableBody2D" unique_id=1914773486]
-position = Vector2(406.17557, 325.16412)
+position = Vector2(23.00003, 18.00003)
 scale = Vector2(3.3100007, 3.3100007)
 texture = ExtResource("1_3ay4d")
 offset = Vector2(-3.6784134, -1.5601501)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="AnimatableBody2D" unique_id=1605668278]
-position = Vector2(3.0517578e-05, 3.0517578e-05)
+position = Vector2(-383, -306.99997)
 scale = Vector2(0.99999994, 0.99999994)
-polygon = PackedVector2Array(645, 161, 669, 187, 669, 212, 652, 213, 647, 201, 627, 212, 571, 238, 557, 187, 505, 193, 471, 174, 424, 187, 385, 178, 354, 193, 310, 186, 278, 231, 262, 279, 280, 316, 265, 338, 287, 373, 273, 410, 276, 429, 301, 423, 303, 443, 305, 471, 350, 460, 360, 463, 379, 447, 400, 469, 422, 470, 455, 459, 494, 467, 519, 451, 525, 414, 532, 407, 534, 400, 509, 384, 533, 376, 522, 366, 513, 361, 510, 347, 491, 328, 468, 324, 431, 342, 414, 330, 399, 327, 383, 336, 365, 332, 350, 326, 337, 316, 340, 300, 370, 275, 399, 265, 420, 260, 477, 262, 492.38687, 267.5235, 516, 276, 545, 290, 573, 318, 601, 363, 612, 395, 606, 439, 593, 468, 572, 495, 534, 534, 501, 554, 462, 557, 402, 559, 343, 557, 309, 546, 280, 531, 243, 512, 218, 490, 169, 434, 170, 305, 175, 272, 186, 223, 219, 177, 250, 139, 289, 109, 350, 76, 391, 70, 435, 71, 543, 91, 580, 113)
+polygon = PackedVector2Array(645, 161, 669, 187, 669, 212, 652, 213, 647, 201, 627, 212, 571, 238, 557, 187, 505, 193, 471, 174, 424, 187, 385, 178, 354, 193, 310, 186, 278, 231, 262, 279, 280, 316, 265, 338, 287, 373, 273, 410, 276, 429, 301, 423, 303, 443, 305, 471, 350, 460, 360, 463, 379, 447, 400, 469, 422, 470, 455, 459, 494, 467, 519, 451, 525, 414, 532, 407, 534, 400, 509, 384, 533, 376, 522, 366, 513, 361, 510, 347, 491, 328, 468, 324, 431, 342, 414, 330, 399, 327, 383, 336, 365, 332, 350, 326, 337, 316, 340, 300, 370, 275, 399, 265, 420, 260, 477, 262, 492.38687, 267.5235, 516, 276, 545, 290, 573, 318, 601, 363, 612, 395, 606, 439, 593, 468, 572, 495, 534, 534, 501, 554, 462, 557, 402, 559, 343, 557, 309, 546, 280, 531, 243, 512, 218, 490, 169, 434, 170, 305, 175, 272, 186, 223, 219, 177, 250, 139, 289, 109, 350, 76, 391, 70, 435, 71, 543, 91, 580, 113, 604.31854, 130.95825)
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1435887589]
 position = Vector2(0, 1)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D" unique_id=576464334]
-position = Vector2(3.0517578e-05, 3.0517578e-05)
+position = Vector2(-383.00003, -307.9999)
 scale = Vector2(0.99999994, 0.99999994)
 polygon = PackedVector2Array(645, 161, 669, 187, 669, 212, 652, 213, 647, 201, 627, 212, 571, 238, 557, 187, 505, 193, 471, 174, 424, 187, 385, 178, 354, 193, 310, 186, 278, 231, 262, 279, 280, 316, 265, 338, 287, 373, 273, 410, 276, 429, 301, 423, 303, 443, 305, 471, 350, 460, 360, 463, 379, 447, 400, 469, 422, 470, 455, 459, 494, 467, 519, 451, 525, 414, 532, 407, 534, 400, 509, 384, 533, 376, 522, 366, 513, 361, 510, 347, 491, 328, 468, 324, 431, 342, 414, 330, 399, 327, 383, 336, 365, 332, 350, 326, 337, 316, 340, 300, 370, 275, 399, 265, 420, 260, 477, 262, 492.38687, 267.5235, 516, 276, 545, 290, 573, 318, 601, 363, 612, 395, 606, 439, 593, 468, 572, 495, 534, 534, 501, 554, 462, 557, 402, 559, 343, 557, 309, 546, 280, 531, 243, 512, 218, 490, 169, 434, 170, 305, 175, 272, 186, 223, 219, 177, 250, 139, 289, 109, 350, 76, 391, 70, 435, 71, 543, 91, 580, 113)
 
 [node name="curses" type="Node2D" parent="." unique_id=1498569870]
 
 [node name="curse" parent="curses" unique_id=1593987422 instance=ExtResource("2_6fsnt")]
-position = Vector2(532, 151)
+position = Vector2(152.00003, -157.99997)
 scale = Vector2(0.3200006, 0.3200006)
 
 [node name="curse2" parent="curses" unique_id=1224572374 instance=ExtResource("2_6fsnt")]
-position = Vector2(435.99997, 296)
+position = Vector2(56, -12.9999695)
 scale = Vector2(0.3200006, 0.3200006)
 
 [node name="curse3" parent="curses" unique_id=1198180585 instance=ExtResource("2_6fsnt")]
-position = Vector2(209, 315.00006)
+position = Vector2(-170.99997, 6.0000916)
 scale = Vector2(0.3200006, 0.3200006)
 
 [node name="vision_curse" parent="curses" unique_id=513166064 instance=ExtResource("3_qo4em")]
-position = Vector2(361, 307)
+position = Vector2(-19, -2)
 scale = Vector2(1.9200001, 1.9200001)
 
 [node name="vision_curse2" parent="curses" unique_id=1171823409 instance=ExtResource("3_qo4em")]
-position = Vector2(209, 290)
+position = Vector2(-171, -19)
 scale = Vector2(1.9200001, 1.9200001)
 
 [node name="vision_curse3" parent="curses" unique_id=1332822126 instance=ExtResource("3_qo4em")]
-position = Vector2(604, 195)
+position = Vector2(224, -114)
 scale = Vector2(1.9200001, 1.9200001)
 
 [node name="vision_curse4" parent="curses" unique_id=75501631 instance=ExtResource("3_qo4em")]
@@ -64,10 +127,10 @@ anchor_left = -0.33509365
 anchor_top = -1.3050663
 anchor_right = 0.3596068
 anchor_bottom = -0.23253316
-offset_left = 181.0
-offset_top = -195.0
-offset_right = 1480.0
-offset_bottom = -68.0
+offset_left = 229.0
+offset_top = -258.0
+offset_right = 1528.0
+offset_bottom = -27.0
 text = "- the teeth_spiral is in teeth_spiral_ANIMATED in lvl2 because it is the only way to make it spin around its own axis.
 - does not work as is (crazy glitch)
 - when turned into area 2D it only spins one cycle then glitches in the same way, also no collision obvs
@@ -85,3 +148,7 @@ text = "if for some reason the animatable body isnt working
 you can try changing the node type to Area2D or creating an Area 2D 
 with the same colision shape and just pasting it on top."
 metadata/_edit_use_anchors_ = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=18023420]
+libraries/ = SubResource("AnimationLibrary_ss4ny")
+autoplay = &"area2d spin"

@@ -32,7 +32,7 @@ point_count = 3
 distance = -19.222778
 
 [sub_resource type="Animation" id="Animation_22vjt"]
-length = 8.0
+length = 0.001
 loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -252,6 +252,7 @@ position = Vector2(-427.22778, -318.31683)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="teeth_spiral_ANIMATED" unique_id=1220479970]
 libraries/ = SubResource("AnimationLibrary_e03lu")
+autoplay = &"RESET"
 
 [node name="Timer" type="Timer" parent="teeth_spiral_ANIMATED" unique_id=1316882816]
 

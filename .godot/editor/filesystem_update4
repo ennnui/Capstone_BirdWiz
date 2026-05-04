@@ -1,8 +1,5 @@
-res://the_beginning.tscn
-res://blur_effect.gdshader
-res://scroll.tscn
-res://scroll.gd
-res://opened_scroll.tscn
-res://scroll_large.tscn
-res://scroll_large.gd
 res://teeth_spiral.tscn
+res://blur_effect.gdshader
+res://lvl.tscn
+res://lvl_2.tscn
+res://teeth_spiral_animated.gd
