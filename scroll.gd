@@ -1,8 +1,12 @@
-extends Node2D
-
-@onready var opened_scroll = $"../opened_scroll"
-
-
-func _on_area_2d_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
-	if event is InputEventMouseButton and event.pressed:
-		opened_scroll.toggle_scroll()
+extends Area2D
+var triggered = false
+	
+	
+func _on_body_entered(body):
+	if body.name == "CharacterBody2D" and not triggered:
+		triggered = true
+		monitoring = false
+		
+		$AnimatedSprite2D.play("open_sesame")
+		#print_tree_pretty()
+		#$Scroll_large.play("open_large_sesame")

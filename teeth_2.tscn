@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://c6whjde7o0ci0" path="res://Assets/teeth2 -top.png" id="2_kxchh"]
 [ext_resource type="Texture2D" uid="uid://f8v5pimraks4" path="res://Assets/teeth 2 - bot.png" id="3_vd7pa"]
 [ext_resource type="PackedScene" uid="uid://v1j15p5c1rn0" path="res://curse.tscn" id="4_vd7pa"]
+[ext_resource type="PackedScene" uid="uid://chq4a3a7p516b" path="res://vision_curse.tscn" id="5_2ykxy"]
 
 [sub_resource type="Animation" id="Animation_nhvtx"]
 length = 8.0
@@ -309,6 +310,10 @@ position = Vector2(-169.9416, -207.15057)
 rotation = -0.2268928
 scale = Vector2(0.24288517, 0.24288517)
 
+[node name="vision_curse" parent="Teeth2Top" unique_id=513166064 instance=ExtResource("5_2ykxy")]
+position = Vector2(30.985596, -232.23755)
+scale = Vector2(1.2385278, 1.2385278)
+
 [node name="Teeth2Bot" type="Sprite2D" parent="." unique_id=1480227915]
 position = Vector2(-417.6591, 567.716)
 scale = Vector2(2.038, 2.038)
@@ -341,6 +346,10 @@ scale = Vector2(0.24288517, 0.24288517)
 position = Vector2(-174.84833, -52.556946)
 rotation = 0.4223697
 scale = Vector2(0.24288517, 0.24288517)
+
+[node name="vision_curse2" parent="Teeth2Bot" unique_id=780674808 instance=ExtResource("5_2ykxy")]
+position = Vector2(-89.70292, -19.241714)
+scale = Vector2(1.3950607, 1.3950607)
 
 [connection signal="timeout" from="AnimationPlayer/Timer" to="." method="_on_timer_timeout"]
 [connection signal="body_exited" from="Teeth2Top/Area2D" to="." method="_on_area_2d_body_exited"]

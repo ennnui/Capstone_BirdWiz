@@ -12,7 +12,6 @@
 [ext_resource type="PackedScene" uid="uid://u3gygp0ov28k" path="res://portal_3.tscn" id="10_vbeg1"]
 [ext_resource type="Texture2D" uid="uid://d38nnhv13jhsr" path="res://Assets/curse_asset_snowflake.png" id="11_vbeg1"]
 [ext_resource type="PackedScene" uid="uid://pf467fi618sg" path="res://vision_effect_full_screen.tscn" id="12_t0ydl"]
-[ext_resource type="PackedScene" uid="uid://chq4a3a7p516b" path="res://vision_curse.tscn" id="13_t0ydl"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_1v3ac"]
 
@@ -31,7 +30,7 @@ point_count = 3
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_beans"]
 distance = -19.193848
 
-[node name="Node2D" type="Node2D" unique_id=874263600]
+[node name="LVL_2" type="Node2D" unique_id=874263600]
 
 [node name="bkg" type="ColorRect" parent="." unique_id=1218077564]
 offset_left = -176.0
@@ -237,9 +236,5 @@ color = Color(1, 1, 1, 0)
 
 [node name="vision_effect_full_screen" parent="CanvasLayer/ColorRect" unique_id=1490763850 instance=ExtResource("12_t0ydl")]
 position = Vector2(-14, 28)
-
-[node name="vision_curse" parent="." unique_id=513166064 instance=ExtResource("13_t0ydl")]
-position = Vector2(864, -27.999939)
-scale = Vector2(4.76, 4.76)
 
 [connection signal="body_entered" from="killbox_lvl2" to="killbox_lvl2" method="_on_body_entered"]

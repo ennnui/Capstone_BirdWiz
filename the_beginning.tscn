@@ -24,14 +24,6 @@ size = Vector2(1219, 22)
 
 [node name="parallaxbeginning" type="Node2D" unique_id=534859937]
 
-[node name="bird wiz" parent="." unique_id=865072794 instance=ExtResource("14_n477j")]
-z_index = 1
-position = Vector2(193.99998, 163.99998)
-
-[node name="AudioListener2D" type="AudioListener2D" parent="bird wiz" unique_id=286541849]
-position = Vector2(246.00859, 246.42087)
-scale = Vector2(0.9959863, 0.99765563)
-
 [node name="parallax_folder" type="Node2D" parent="." unique_id=1886019782]
 
 [node name="layer 1" type="Parallax2D" parent="parallax_folder" unique_id=1207588071]
@@ -183,8 +175,18 @@ scale = Vector2(2.23, 2.23)
 position = Vector2(2328, 510)
 
 [node name="opened_scroll" parent="." unique_id=925162582 instance=ExtResource("15_ktyr8")]
-offset_left = 1208.9999
-offset_top = 508.0
-offset_right = 1208.9999
-offset_bottom = 508.0
+position = Vector2(238, -1055)
 script = ExtResource("18_msiip")
+
+[node name="bird wiz" parent="." unique_id=865072794 instance=ExtResource("14_n477j")]
+z_index = 1
+position = Vector2(931, 305)
+
+[node name="AudioListener2D" type="AudioListener2D" parent="bird wiz" unique_id=286541849]
+position = Vector2(246.00859, 246.42087)
+scale = Vector2(0.9959863, 0.99765563)
+
+[node name="Scroll" parent="." unique_id=1319835675 instance=ExtResource("15_bxixq")]
+visible = false
+position = Vector2(557, 205)
+scale = Vector2(13.388555, 13.388555)

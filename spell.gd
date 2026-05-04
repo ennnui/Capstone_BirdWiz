@@ -20,9 +20,14 @@ func _on_area_2d_area_entered(area: Area2D) -> void:
 		area.queue_free()
 		queue_free()
 	elif area.is_in_group("bad_curse"):
-		var white_box = get_tree().root.get_node("Node2D/CanvasLayer/ColorRect")
+		area.queue_free()
+		queue_free()
+		#defines path
+		get_tree().root.print_tree_pretty()
+		var white_box = get_tree().root.get_node("LVL/CanvasLayer/ColorRect")
+		if not white_box:
+			white_box = get_tree().root.get_node("LVL_2/CanvasLayer/ColorRect")
 		white_box.visible = true
 		await get_tree().create_timer(5.0).timeout
 		white_box.visible = false
-		area.queue_free()
-		queue_free()
+		
