@@ -147,7 +147,7 @@ position = Vector2(3360.0002, -16.000002)
 scale = Vector2(0.87518597, 0.87518597)
 
 [node name="Path2D5" parent="." unique_id=1315880157 instance=ExtResource("6_7rxco")]
-position = Vector2(3526.9998, -325)
+position = Vector2(3492.9998, -333)
 scale = Vector2(0.975, 0.972)
 curve = SubResource("Curve2D_beans")
 
@@ -157,7 +157,7 @@ scale = Vector2(0.87518597, 0.87518597)
 curve = SubResource("Curve2D_bmf8x")
 
 [node name="Path2D7" parent="." unique_id=630676998 instance=ExtResource("6_7rxco")]
-position = Vector2(3709, -714.00006)
+position = Vector2(3713, -633.00006)
 scale = Vector2(1.0352811, 1.0352811)
 curve = SubResource("Curve2D_bmf8x")
 speed = 4.0
