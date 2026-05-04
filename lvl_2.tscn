@@ -18,13 +18,13 @@
 
 [sub_resource type="Curve2D" id="Curve2D_beans"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, 315.89795, 431.06995, 0, 0, 0, 0, 579.48755, 432.0988, 0, 0, 0, 0, 579.48755, 485.59674, 0, 0, 0, 0, 579.48755, 544.2387, 0, 0, 0, 0, 508.71826, 543.20996, 0, 0, 0, 0, 310.76953, 542.18115, 0, 0, 0, 0, 310.71423, 440.3341)
+"points": PackedVector2Array(0, 0, 0, 0, 323.07715, 434.15643, 0, 0, 0, 0, 579.48755, 432.0988, 0, 0, 0, 0, 579.48755, 485.59674, 0, 0, 0, 0, 579.48755, 544.2387, 0, 0, 0, 0, 508.71826, 543.20996, 0, 0, 0, 0, 310.76953, 542.18115, 0, 0, 0, 0, 310.71423, 440.3341)
 }
 point_count = 7
 
 [sub_resource type="Curve2D" id="Curve2D_bmf8x"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, 311.02686, 250.17361, 0, 0, 0, 0, 310.06104, 680.00854, 0, 0, 0, 0, 310.06104, 250.17361)
+"points": PackedVector2Array(0, 0, 0, 0, 309.09473, 216.36642, 0, 0, 0, 0, 307.16284, 763.0778, 0, 0, 0, 0, 310.06104, 250.17361)
 }
 point_count = 3
 
@@ -32,7 +32,7 @@ point_count = 3
 distance = -19.222778
 
 [sub_resource type="Animation" id="Animation_22vjt"]
-length = 0.001
+length = 8.033334
 loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -91,7 +91,7 @@ metadata/_edit_lock_ = true
 position = Vector2(32, 330)
 
 [node name="bird wiz" parent="." unique_id=865072794 instance=ExtResource("1_tu4c3")]
-position = Vector2(5432, -144)
+position = Vector2(4376, 487)
 
 [node name="platforms" type="Node2D" parent="." unique_id=712724980]
 
@@ -125,6 +125,24 @@ position = Vector2(5208, -48)
 
 [node name="Platformer Stat19" parent="platforms" unique_id=931907645 instance=ExtResource("1_dbx23")]
 position = Vector2(5415, -48)
+
+[node name="Platformer Stat21" parent="platforms" unique_id=8889611 instance=ExtResource("1_dbx23")]
+position = Vector2(4374, 605)
+
+[node name="Platformer Stat25" parent="platforms" unique_id=1705042892 instance=ExtResource("1_dbx23")]
+position = Vector2(4165, 605)
+
+[node name="Platformer Stat26" parent="platforms" unique_id=545876155 instance=ExtResource("1_dbx23")]
+position = Vector2(3957, 605)
+
+[node name="Platformer Stat22" parent="platforms" unique_id=1274061185 instance=ExtResource("1_dbx23")]
+position = Vector2(4581, 605)
+
+[node name="Platformer Stat23" parent="platforms" unique_id=1484753116 instance=ExtResource("1_dbx23")]
+position = Vector2(4788, 605)
+
+[node name="Platformer Stat24" parent="platforms" unique_id=2129597266 instance=ExtResource("1_dbx23")]
+position = Vector2(4995, 605)
 
 [node name="Platformer Stat20" parent="platforms" unique_id=1733839114 instance=ExtResource("1_dbx23")]
 position = Vector2(5622, -48)
@@ -162,7 +180,27 @@ position = Vector2(3411.0002, 359)
 scale = Vector2(2.190633, 2.190633)
 
 [node name="static plat circle15" parent="platforms" unique_id=361661856 instance=ExtResource("7_beans")]
-position = Vector2(3684, 208)
+position = Vector2(3720, 263)
+scale = Vector2(2.190633, 2.190633)
+
+[node name="static plat circle18" parent="platforms" unique_id=1646968792 instance=ExtResource("7_beans")]
+position = Vector2(3812, 332)
+scale = Vector2(2.190633, 2.190633)
+
+[node name="static plat circle19" parent="platforms" unique_id=696366481 instance=ExtResource("7_beans")]
+position = Vector2(4040.0002, 463)
+scale = Vector2(2.190633, 2.190633)
+
+[node name="static plat circle23" parent="platforms" unique_id=588518709 instance=ExtResource("7_beans")]
+position = Vector2(4182, 512)
+scale = Vector2(2.190633, 2.190633)
+
+[node name="static plat circle24" parent="platforms" unique_id=1206305664 instance=ExtResource("7_beans")]
+position = Vector2(4300, 577)
+scale = Vector2(2.190633, 2.190633)
+
+[node name="static plat circle20" parent="platforms" unique_id=1996160988 instance=ExtResource("7_beans")]
+position = Vector2(3913.0002, 402.00003)
 scale = Vector2(2.190633, 2.190633)
 
 [node name="static plat circle16" parent="platforms" unique_id=744221611 instance=ExtResource("7_beans")]
@@ -174,7 +212,15 @@ position = Vector2(2505, -21.000002)
 scale = Vector2(2.190633, 2.190633)
 
 [node name="static plat circle8" parent="platforms" unique_id=994369272 instance=ExtResource("7_beans")]
-position = Vector2(3633, 35.999985)
+position = Vector2(3620, 29)
+scale = Vector2(2.190633, 2.190633)
+
+[node name="static plat circle21" parent="platforms" unique_id=29958224 instance=ExtResource("7_beans")]
+position = Vector2(4244, -547)
+scale = Vector2(2.190633, 2.190633)
+
+[node name="static plat circle22" parent="platforms" unique_id=1930242382 instance=ExtResource("7_beans")]
+position = Vector2(4471, -594.99994)
 scale = Vector2(2.190633, 2.190633)
 
 [node name="Rotating platform" parent="platforms" unique_id=163208465 instance=ExtResource("6_e03lu")]
@@ -186,7 +232,7 @@ position = Vector2(3360.0002, -16.000002)
 scale = Vector2(0.87518597, 0.87518597)
 
 [node name="Path2D5" parent="." unique_id=1315880157 instance=ExtResource("6_7rxco")]
-position = Vector2(3492.9998, -333)
+position = Vector2(3427.9998, -342)
 scale = Vector2(0.975, 0.972)
 curve = SubResource("Curve2D_beans")
 
@@ -196,10 +242,10 @@ scale = Vector2(0.87518597, 0.87518597)
 curve = SubResource("Curve2D_bmf8x")
 
 [node name="Path2D7" parent="." unique_id=630676998 instance=ExtResource("6_7rxco")]
-position = Vector2(3713, -633.00006)
+position = Vector2(3755, -622.00006)
 scale = Vector2(1.0352811, 1.0352811)
 curve = SubResource("Curve2D_bmf8x")
-speed = 4.0
+speed = 3.0
 
 [node name="Path2D4" parent="." unique_id=297122102 instance=ExtResource("6_7rxco")]
 position = Vector2(840.00006, -30.000002)
@@ -242,13 +288,16 @@ color = Color(1, 1, 1, 0)
 [node name="vision_effect_full_screen" parent="CanvasLayer/ColorRect" unique_id=1490763850 instance=ExtResource("12_t0ydl")]
 position = Vector2(-14, 28)
 
+[node name="teeth_spiral" parent="." unique_id=705743824 instance=ExtResource("14_e03lu")]
+position = Vector2(4589, -11.999878)
+rotation = -1.1868238
+scale = Vector2(1.66, 1.66)
+
 [node name="teeth_spiral_ANIMATED" type="Node2D" parent="." unique_id=9524742]
+visible = false
 position = Vector2(4647, -66)
 scale = Vector2(2.02, 2.02)
 script = ExtResource("12_e03lu")
-
-[node name="teeth_spiral" parent="teeth_spiral_ANIMATED" unique_id=705743824 instance=ExtResource("14_e03lu")]
-position = Vector2(-427.22778, -318.31683)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="teeth_spiral_ANIMATED" unique_id=1220479970]
 libraries/ = SubResource("AnimationLibrary_e03lu")
