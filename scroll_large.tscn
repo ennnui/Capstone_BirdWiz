@@ -4,7 +4,9 @@
 [ext_resource type="Texture2D" uid="uid://dbthhwwbci0ae" path="res://Assets/scroll_folder/scroll_opened__00.png" id="2_2100c"]
 [ext_resource type="Texture2D" uid="uid://d226y20gow2fh" path="res://Assets/scroll_folder/scroll_opened__01.png" id="3_dowou"]
 [ext_resource type="Texture2D" uid="uid://ci8w2k5rr55th" path="res://Assets/scroll_folder/scroll_opened__03.png" id="5_6clei"]
+[ext_resource type="FontFile" uid="uid://nm7mtm5iymm7" path="res://Assets/monogram/ttf/monogram.ttf" id="6_2100c"]
 [ext_resource type="Texture2D" uid="uid://dexs175j60j68" path="res://Assets/scroll_folder/scroll_opened__04.png" id="6_hf656"]
+[ext_resource type="Texture2D" uid="uid://i2uo5t13uc3n" path="res://Assets/curse_asset2.png" id="7_dowou"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_b07q5"]
 size = Vector2(88, 28)
@@ -27,10 +29,16 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("6_hf656")
 }],
-"loop": true,
-"name": &"default",
+"loop": false,
+"name": &"open_sesame_large",
 "speed": 5.0
 }]
+
+[sub_resource type="LabelSettings" id="LabelSettings_64fkq"]
+line_spacing = 0.01
+font = ExtResource("6_2100c")
+font_size = 36
+font_color = Color(0.15294118, 0.15294118, 0.15294118, 1)
 
 [node name="scroll_large" type="Area2D" unique_id=1206415675]
 script = ExtResource("1_hjyp1")
@@ -40,7 +48,57 @@ position = Vector2(65, 5)
 shape = SubResource("RectangleShape2D_b07q5")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=628463297]
-position = Vector2(19, -3)
+position = Vector2(-38.079998, -5)
+scale = Vector2(1.08, 1.08)
 sprite_frames = SubResource("SpriteFrames_2100c")
-frame = 1
-frame_progress = 0.27496678
+animation = &"open_sesame_large"
+frame = 4
+frame_progress = 1.0
+
+[node name="instructions" type="Node2D" parent="." unique_id=2094128005]
+
+[node name="Label" type="Label" parent="instructions" unique_id=978831677]
+offset_left = -58.0
+offset_top = -13.0
+offset_right = 241.0
+offset_bottom = 277.0
+scale = Vector2(0.082287565, 0.082287565)
+text = "Apprentice! 
+
+Before you may graduate, you must complete your thesis: cleaning the teeth of 
+underground monsters.
+
+Sure am glad I'm not you! Ha ha.. ha. Hm."
+label_settings = SubResource("LabelSettings_64fkq")
+autowrap_mode = 3
+
+[node name="Label2" type="Label" parent="instructions" unique_id=1678520846]
+offset_left = -30.0
+offset_top = -13.0
+offset_right = 269.0
+offset_bottom = 277.0
+scale = Vector2(0.082287565, 0.082287565)
+text = "Click on curses 
+to clean them.
+
+But beware!
+Some curses are NOT meant to be cleaned...
+
+Good luck, and don't get bit ;)"
+label_settings = SubResource("LabelSettings_64fkq")
+autowrap_mode = 3
+
+[node name="CurseAsset2" type="Sprite2D" parent="instructions" unique_id=1092277109]
+position = Vector2(-10, -10)
+scale = Vector2(0.27493736, 0.28000036)
+texture = ExtResource("7_dowou")
+
+[node name="Line2D" type="Line2D" parent="instructions" unique_id=1548316142]
+position = Vector2(-32.614006, 9.758265)
+rotation = 3.1415925
+scale = Vector2(0.0672283, -0.32795328)
+points = PackedVector2Array(0.5263158, -66.34563, 0.2567749, 3.460991, 0, 0)
+width = 3.0
+default_color = Color(0.15294118, 0.15294118, 0.15294118, 1)
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
