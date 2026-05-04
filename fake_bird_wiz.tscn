@@ -6,7 +6,7 @@
 [sub_resource type="GDScript" id="GDScript_m65a0"]
 script/source = "extends CharacterBody2D
 
-@onready var bird_wiz = $CharacterBody2D
+@onready var bird_wiz = $AnimatedSprite2D
 
 func _ready():
 	bird_wiz.play(\"idle\")

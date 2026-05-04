@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://d0jy8wmtjb2h8"]
 
+[ext_resource type="Script" uid="uid://bk3ftj6l1mai5" path="res://start_menu.gd" id="1_ctwoq"]
 [ext_resource type="Texture2D" uid="uid://b3agv11dhe7e" path="res://Assets/birdwiz_logo.png" id="1_vpdu5"]
 [ext_resource type="Texture2D" uid="uid://cpbpj485xbpel" path="res://Assets/playbutton.png" id="2_v2mkm"]
 [ext_resource type="FontFile" uid="uid://nm7mtm5iymm7" path="res://Assets/monogram/ttf/monogram.ttf" id="3_ctwoq"]
@@ -10,35 +11,60 @@ font = ExtResource("3_ctwoq")
 font_size = 36
 font_color = Color(0.78431374, 0.827451, 0.8039216, 1)
 
+[sub_resource type="Animation" id="Animation_v2mkm"]
+resource_name = "FAKE idle"
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ctwoq"]
+_data = {
+&"FAKE idle": SubResource("Animation_v2mkm")
+}
+
 [node name="start_menu" type="Node2D" unique_id=407765934]
+script = ExtResource("1_ctwoq")
+
+[node name="ColorRect2" type="ColorRect" parent="." unique_id=233731087]
+offset_left = 2.0
+offset_top = -12.0
+offset_right = 1161.0
+offset_bottom = 649.0
+color = Color(0.03137255, 0.050980393, 0.09803922, 1)
 
 [node name="BirdwizLogo" type="Sprite2D" parent="." unique_id=1321944509]
-position = Vector2(579.64685, 323.62497)
+position = Vector2(578, 271)
 scale = Vector2(6.646906, 6.6469073)
 texture = ExtResource("1_vpdu5")
 
-[node name="Playbutton" type="Sprite2D" parent="." unique_id=810040233]
-position = Vector2(567, 567)
+[node name="ColorRect" type="ColorRect" parent="." unique_id=149583128]
+offset_left = 447.0
+offset_top = 52.0
+offset_right = 688.0
+offset_bottom = 286.0
+color = Color(0.03137255, 0.050980393, 0.09803922, 1)
+
+[node name="Label" type="Label" parent="." unique_id=733317502]
+offset_left = 378.0
+offset_top = 421.0
+offset_right = 758.0
+offset_bottom = 450.0
+text = "A game by Milana and Eleanor"
+label_settings = SubResource("LabelSettings_ppfnh")
+
+[node name="FAKE bird wiz" parent="." unique_id=1137480400 instance=ExtResource("4_v2mkm")]
+position = Vector2(569, 178.99998)
+scale = Vector2(2.049, 2.049)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1291779660]
+libraries/ = SubResource("AnimationLibrary_ctwoq")
+
+[node name="Button" type="Button" parent="." unique_id=727599850]
+offset_left = 494.0
+offset_top = 498.0
+offset_right = 644.0
+offset_bottom = 564.0
+
+[node name="Playbutton" type="Sprite2D" parent="Button" unique_id=810040233]
+position = Vector2(75, 33)
 scale = Vector2(5.5416703, 5.5416703)
 texture = ExtResource("2_v2mkm")
 
-[node name="Label" type="Label" parent="." unique_id=733317502]
-offset_left = 370.0
-offset_top = 470.0
-offset_right = 750.0
-offset_bottom = 499.0
-text = "A game by Milana and Eleanor"
-label_settings = SubResource("LabelSettings_ppfnh")
-metadata/_edit_lock_ = true
-
-[node name="ColorRect" type="ColorRect" parent="Label" unique_id=149583128]
-layout_mode = 0
-offset_left = 77.0
-offset_top = -366.0
-offset_right = 318.0
-offset_bottom = -132.0
-color = Color(0.03137255, 0.050980393, 0.09803922, 1)
-metadata/_edit_lock_ = true
-
-[node name="FAKE bird wiz" parent="." unique_id=1137480400 instance=ExtResource("4_v2mkm")]
-position = Vector2(564, 261)
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
