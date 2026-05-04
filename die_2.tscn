@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://decq60fwrlvlg" path="res://die_2.gd" id="1_3qwyl"]
 [ext_resource type="FontFile" uid="uid://nm7mtm5iymm7" path="res://Assets/monogram/ttf/monogram.ttf" id="1_hyh7h"]
 [ext_resource type="Texture2D" uid="uid://ok6jrwmekcc4" path="res://Assets/again24x24.png" id="2_3qwyl"]
+[ext_resource type="Texture2D" uid="uid://mlfhxcwdxp5g" path="res://Assets/teeth_border_1.png" id="4_4swsk"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4swsk"]
 bg_color = Color(0.02745098, 0.09411765, 0.12941177, 1)
@@ -44,10 +45,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -277.5
-offset_top = -155.5
-offset_right = 277.5
-offset_bottom = 155.5
+offset_left = -245.0
+offset_top = -292.25003
+offset_right = 261.0
+offset_bottom = 287.75
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_4swsk")
@@ -78,5 +79,10 @@ size_flags_vertical = 8
 theme_override_colors/icon_hover_color = Color(0.5803922, 0.8901961, 0.27058825, 1)
 icon = ExtResource("2_3qwyl")
 icon_alignment = 1
+
+[node name="TeethBorder1" type="Sprite2D" parent="." unique_id=87083526]
+position = Vector2(591.9999, 312.74997)
+scale = Vector2(4.249999, 4.2499995)
+texture = ExtResource("4_4swsk")
 
 [connection signal="button_down" from="PanelContainer/VBoxContainer/Button" to="." method="_on_button_button_down"]

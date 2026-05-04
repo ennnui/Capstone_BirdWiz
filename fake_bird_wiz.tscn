@@ -1,0 +1,172 @@
+[gd_scene format=3 uid="uid://di7vrm6l6x7a6"]
+
+[ext_resource type="Texture2D" uid="uid://c8oki5s70cebp" path="res://rook_revised.png" id="1_4com5"]
+[ext_resource type="Texture2D" uid="uid://dk7jkme0dud0u" path="res://Rook-Sheet.png" id="2_em2qh"]
+
+[sub_resource type="GDScript" id="GDScript_m65a0"]
+script/source = "extends CharacterBody2D
+
+@onready var bird_wiz = $CharacterBody2D
+
+func _ready():
+	bird_wiz.play(\"idle\")
+		
+	move_and_slide()
+"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_y6a8n"]
+size = Vector2(83, 90)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_528w0"]
+atlas = ExtResource("1_4com5")
+region = Rect2(16, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gfdyp"]
+atlas = ExtResource("2_em2qh")
+region = Rect2(16, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qykxv"]
+atlas = ExtResource("1_4com5")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bcf0h"]
+atlas = ExtResource("1_4com5")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mwd2n"]
+atlas = ExtResource("1_4com5")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cwqqq"]
+atlas = ExtResource("1_4com5")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xphr6"]
+atlas = ExtResource("1_4com5")
+region = Rect2(32, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r8jwk"]
+atlas = ExtResource("1_4com5")
+region = Rect2(0, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wk6nl"]
+atlas = ExtResource("1_4com5")
+region = Rect2(48, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5icvs"]
+atlas = ExtResource("1_4com5")
+region = Rect2(32, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rjdrh"]
+atlas = ExtResource("1_4com5")
+region = Rect2(0, 48, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7ps3g"]
+atlas = ExtResource("1_4com5")
+region = Rect2(16, 48, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bfh14"]
+atlas = ExtResource("1_4com5")
+region = Rect2(32, 48, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8n7px"]
+atlas = ExtResource("1_4com5")
+region = Rect2(48, 48, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5vbmh"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_528w0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gfdyp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_528w0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gfdyp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_528w0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gfdyp")
+}],
+"loop": false,
+"name": &"dead",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qykxv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bcf0h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mwd2n")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cwqqq")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xphr6")
+}],
+"loop": true,
+"name": &"jump",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r8jwk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wk6nl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5icvs")
+}],
+"loop": true,
+"name": &"walk_left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rjdrh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7ps3g")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bfh14")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8n7px")
+}],
+"loop": true,
+"name": &"walk_left_potion",
+"speed": 5.0
+}]
+
+[node name="FAKE bird wiz" type="Node2D" unique_id=1137480400]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=609048221 groups=["player"]]
+script = SubResource("GDScript_m65a0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=1166702697]
+position = Vector2(1.5, 2)
+shape = SubResource("RectangleShape2D_y6a8n")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D" unique_id=242181628]
+position = Vector2(-1.5, 2.5)
+scale = Vector2(5.5625, 5.5625)
+sprite_frames = SubResource("SpriteFrames_5vbmh")
+animation = &"idle"
+autoplay = "idle"

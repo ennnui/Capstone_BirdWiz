@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://7y5k7ka7jptf"]
 
 [ext_resource type="PackedScene" uid="uid://d0pmk23cb40rd" path="res://platformer_stat.tscn" id="1_dbx23"]
+[ext_resource type="Texture2D" uid="uid://ba8eg8m6ry65k" path="res://Assets/monster2.png" id="1_t0ydl"]
 [ext_resource type="PackedScene" uid="uid://cbro7qol3bvoh" path="res://bird_wiz.tscn" id="1_tu4c3"]
 [ext_resource type="PackedScene" uid="uid://yjcs7pr38s30" path="res://portal_revised.tscn" id="2_1v3ac"]
 [ext_resource type="PackedScene" uid="uid://df3672npsubkr" path="res://mushroom.tscn" id="2_tu4c3"]
@@ -12,12 +13,13 @@
 [ext_resource type="PackedScene" uid="uid://u3gygp0ov28k" path="res://portal_3.tscn" id="10_vbeg1"]
 [ext_resource type="Texture2D" uid="uid://d38nnhv13jhsr" path="res://Assets/curse_asset_snowflake.png" id="11_vbeg1"]
 [ext_resource type="PackedScene" uid="uid://pf467fi618sg" path="res://vision_effect_full_screen.tscn" id="12_t0ydl"]
+[ext_resource type="PackedScene" uid="uid://3xxdj0t6h20u" path="res://teeth_spiral.tscn" id="14_e03lu"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_1v3ac"]
 
 [sub_resource type="Curve2D" id="Curve2D_beans"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, 315.89795, 431.06995, 0, 0, 0, 0, 659.4878, 434.15643, 0, 0, 0, 0, 661.53906, 488.6832, 0, 0, 0, 0, 661.53906, 543.20996, 0, 0, 0, 0, 508.71826, 543.20996, 0, 0, 0, 0, 310.76953, 542.18115, 0, 0, 0, 0, 310.71423, 440.3341)
+"points": PackedVector2Array(0, 0, 0, 0, 315.89795, 431.06995, 0, 0, 0, 0, 579.48755, 432.0988, 0, 0, 0, 0, 579.48755, 485.59674, 0, 0, 0, 0, 579.48755, 544.2387, 0, 0, 0, 0, 508.71826, 543.20996, 0, 0, 0, 0, 310.76953, 542.18115, 0, 0, 0, 0, 310.71423, 440.3341)
 }
 point_count = 7
 
@@ -37,14 +39,20 @@ offset_left = -176.0
 offset_top = -1663.0
 offset_right = 6683.0
 offset_bottom = 2494.0
-color = Color(0.13980073, 0.08178329, 0.20441401, 1)
+color = Color(0.039215688, 0.06666667, 0.12941177, 1)
 metadata/_edit_lock_ = true
+
+[node name="Monster2" type="Sprite2D" parent="." unique_id=1773552128]
+position = Vector2(2330.0002, 121.00003)
+rotation = -0.10471976
+scale = Vector2(10.504492, 10.504492)
+texture = ExtResource("1_t0ydl")
 
 [node name="portal" parent="." unique_id=659579274 instance=ExtResource("2_1v3ac")]
 position = Vector2(32, 330)
 
 [node name="bird wiz" parent="." unique_id=865072794 instance=ExtResource("1_tu4c3")]
-position = Vector2(208, 373)
+position = Vector2(3753, -105)
 
 [node name="platforms" type="Node2D" parent="." unique_id=712724980]
 
@@ -65,9 +73,6 @@ position = Vector2(2965, 96)
 
 [node name="Platformer Stat7" parent="platforms" unique_id=1078181947 instance=ExtResource("1_dbx23")]
 position = Vector2(2135, 96)
-
-[node name="Platformer Stat4" parent="platforms" unique_id=1371736270 instance=ExtResource("1_dbx23")]
-position = Vector2(473, 404)
 
 [node name="Platformer Stat2" parent="platforms" unique_id=1330272824 instance=ExtResource("1_dbx23")]
 position = Vector2(266, 404)
@@ -129,11 +134,11 @@ position = Vector2(3318, 100)
 scale = Vector2(2.190633, 2.190633)
 
 [node name="static plat circle7" parent="platforms" unique_id=1293174729 instance=ExtResource("7_beans")]
-position = Vector2(3501.0002, 149.00002)
+position = Vector2(3512.0002, 4.999999)
 scale = Vector2(2.190633, 2.190633)
 
 [node name="static plat circle8" parent="platforms" unique_id=994369272 instance=ExtResource("7_beans")]
-position = Vector2(3670, 187)
+position = Vector2(3755, -32)
 scale = Vector2(2.190633, 2.190633)
 
 [node name="Label2" parent="." unique_id=738944035 instance=ExtResource("5_bmf8x")]
@@ -144,7 +149,8 @@ offset_bottom = -221.0
 text = "this one needs some real cleaning..."
 
 [node name="Path2D5" parent="." unique_id=1315880157 instance=ExtResource("6_7rxco")]
-position = Vector2(3478, -177.99998)
+visible = false
+position = Vector2(3526.9998, -325)
 scale = Vector2(0.975, 0.972)
 curve = SubResource("Curve2D_beans")
 
@@ -159,13 +165,13 @@ scale = Vector2(1.066, 1.066)
 curve = SubResource("Curve2D_bmf8x")
 
 [node name="Path2D5" parent="Path2D4" unique_id=630676998 instance=ExtResource("6_7rxco")]
-position = Vector2(4166.869, -523.75146)
+position = Vector2(3389.7688, -805.1158)
 scale = Vector2(1.261, 1.261)
 curve = SubResource("Curve2D_bmf8x")
 speed = 4.0
 
 [node name="Path2D3" parent="." unique_id=2111077473 instance=ExtResource("6_7rxco")]
-position = Vector2(609.00006, 963)
+position = Vector2(631.00006, 963)
 scale = Vector2(0.84, -0.84050804)
 curve = SubResource("Curve2D_bmf8x")
 
@@ -221,7 +227,7 @@ scale = Vector2(5.5624876, 5.5624876)
 texture = ExtResource("11_vbeg1")
 
 [node name="teeth_2" parent="." unique_id=440487622 instance=ExtResource("3_7rxco")]
-position = Vector2(1367.0001, -8)
+position = Vector2(1301.0001, -8)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1073758780]
 
@@ -236,5 +242,9 @@ color = Color(1, 1, 1, 0)
 
 [node name="vision_effect_full_screen" parent="CanvasLayer/ColorRect" unique_id=1490763850 instance=ExtResource("12_t0ydl")]
 position = Vector2(-14, 28)
+
+[node name="teeth_spiral" parent="." unique_id=705743824 instance=ExtResource("14_e03lu")]
+position = Vector2(3784, -709)
+scale = Vector2(2.02, 2.02)
 
 [connection signal="body_entered" from="killbox_lvl2" to="killbox_lvl2" method="_on_body_entered"]

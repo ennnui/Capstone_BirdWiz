@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://3xxdj0t6h20u"]
+
+[ext_resource type="Texture2D" uid="uid://bypgr2a1pfq58" path="res://Assets/monster2mouth.png" id="1_3ay4d"]
+
+[node name="teeth_spiral" type="Node2D" unique_id=705743824]
+
+[node name="Monster2Mouth" type="Sprite2D" parent="." unique_id=1914773486]
+position = Vector2(394.00003, 320.00003)
+scale = Vector2(3.3100007, 3.3100007)
+texture = ExtResource("1_3ay4d")
+
+[node name="AnimatableBody2D" type="AnimatableBody2D" parent="." unique_id=1297449525]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="AnimatableBody2D" unique_id=1605668278]
+position = Vector2(3.0517578e-05, 3.0517578e-05)
+scale = Vector2(0.99999994, 0.99999994)
+polygon = PackedVector2Array(645, 161, 669, 187, 669, 212, 652, 213, 647, 201, 627, 212, 571, 238, 557, 187, 505, 193, 471, 174, 424, 187, 385, 178, 354, 193, 310, 186, 278, 231, 262, 279, 280, 316, 265, 338, 287, 373, 273, 410, 276, 429, 301, 423, 303, 443, 305, 471, 350, 460, 360, 463, 379, 447, 400, 469, 422, 470, 455, 459, 494, 467, 519, 451, 525, 414, 532, 407, 534, 400, 509, 384, 533, 376, 522, 366, 513, 361, 510, 347, 491, 328, 468, 324, 431, 342, 414, 330, 399, 327, 383, 336, 365, 332, 350, 326, 337, 316, 340, 300, 370, 275, 399, 265, 420, 260, 477, 262, 492.38687, 267.5235, 516, 276, 545, 290, 573, 318, 601, 363, 612, 395, 606, 439, 593, 468, 572, 495, 534, 534, 501, 554, 462, 557, 402, 559, 343, 557, 309, 546, 280, 531, 243, 512, 218, 490, 169, 434, 170, 305, 175, 272, 186, 223, 219, 177, 250, 139, 289, 109, 350, 76, 391, 70, 435, 71, 543, 91, 580, 113)
+
+[node name="helpful notes from elle" type="Label" parent="." unique_id=1894685485]
+visible = false
+offset_left = 179.97
+offset_top = -48.560013
+offset_right = 679.0
+offset_bottom = 20.0
+text = "if for some reason the animatable body isnt working
+you can try changing the node type to Area2D or creating an Area 2D 
+with the same colision shape and just pasting it on top."

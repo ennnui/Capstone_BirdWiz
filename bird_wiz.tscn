@@ -231,10 +231,8 @@ shape = SubResource("RectangleShape2D_u2e7j")
 position = Vector2(-1.5, 2.5)
 scale = Vector2(5.5625, 5.5625)
 sprite_frames = SubResource("SpriteFrames_xphr6")
-animation = &"dead"
+animation = &"idle"
 autoplay = "idle"
-frame = 5
-frame_progress = 1.0
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D" unique_id=41876210]
 position = Vector2(-4, 1)
