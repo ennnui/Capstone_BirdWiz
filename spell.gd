@@ -4,6 +4,11 @@ const VISION_EFFECT = preload("res://vision_effect_full_screen.tscn")
 var speed = 600
 @onready var area = $Area2D
 var has_cleaned = false
+var can_detect = false
+
+func _ready():
+	await get_tree().create_timer(0.1).timeout
+	can_detect = true
 
 func _physics_process(delta): 
 	#look_at(get_global_mouse_position())
@@ -15,6 +20,7 @@ func _physics_process(delta):
 func _on_timer_timeout() -> void:
 	queue_free()
 
+const VISION_EFFECT_FULL_SCREEN = preload("res://vision_effect_full_screen.tscn")
 
 func _on_area_2d_area_entered(area: Area2D) -> void:
 	if area.is_in_group("curse"): 
@@ -22,13 +28,18 @@ func _on_area_2d_area_entered(area: Area2D) -> void:
 		queue_free()
 	elif area.is_in_group("bad_curse"):
 		area.queue_free()
-		queue_free()
 		#defines path
 		#get_tree().root.print_tree_pretty()
 		var white_box = get_tree().root.get_node("LVL/CanvasLayer/ColorRect")
 		if not white_box:
 			white_box = get_tree().root.get_node("LVL_2/CanvasLayer/ColorRect")
 		white_box.visible = true
+		print("before")
+		var effect = VISION_EFFECT_FULL_SCREEN.instantiate()
+		white_box.add_child(effect)
 		await get_tree().create_timer(5.0).timeout
+		print("after")
 		white_box.visible = false
+		queue_free()
+
 		

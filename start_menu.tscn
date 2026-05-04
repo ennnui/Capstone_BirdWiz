@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://d0jy8wmtjb2h8"]
 
-[ext_resource type="Script" uid="uid://bk3ftj6l1mai5" path="res://start_menu.gd" id="1_ctwoq"]
+[ext_resource type="Script" path="res://start_menu.gd" id="1_ctwoq"]
 [ext_resource type="Texture2D" uid="uid://b3agv11dhe7e" path="res://Assets/birdwiz_logo.png" id="1_vpdu5"]
 [ext_resource type="Texture2D" uid="uid://cpbpj485xbpel" path="res://Assets/playbutton.png" id="2_v2mkm"]
 [ext_resource type="FontFile" uid="uid://nm7mtm5iymm7" path="res://Assets/monogram/ttf/monogram.ttf" id="3_ctwoq"]

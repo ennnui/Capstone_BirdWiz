@@ -13,7 +13,6 @@
 [ext_resource type="PackedScene" uid="uid://yjcs7pr38s30" path="res://portal_revised.tscn" id="10_stq4b"]
 [ext_resource type="PackedScene" uid="uid://b7dicbh2ub0xu" path="res://portal_2.tscn" id="11_dqmf8"]
 [ext_resource type="Script" uid="uid://dhu64nvp2m352" path="res://portal_2.gd" id="12_8ud87"]
-[ext_resource type="PackedScene" uid="uid://pf467fi618sg" path="res://vision_effect_full_screen.tscn" id="17_xfunc"]
 [ext_resource type="PackedScene" uid="uid://d2xhqcxr41sij" path="res://weird plat.tscn" id="58_xj1nr"]
 
 [sub_resource type="Curve2D" id="Curve2D_5ud41"]
@@ -69,10 +68,10 @@ scale = Vector2(0.84, 0.838)
 curve = SubResource("Curve2D_5ud41")
 
 [node name="Path2D4" parent="." unique_id=1580850798 instance=ExtResource("3_4iw1c")]
-position = Vector2(1675.0001, -6.000004)
+position = Vector2(1577, -6.000004)
 scale = Vector2(0.84, 0.838)
 curve = SubResource("Curve2D_kfp6p")
-speed = 3.5
+speed = 2.5
 
 [node name="Path2D3" parent="." unique_id=899127022 instance=ExtResource("3_4iw1c")]
 position = Vector2(460.0001, 970)
@@ -116,17 +115,9 @@ offset_bottom = -1327.0
 text = "oh, and.... don't get bit!"
 horizontal_alignment = 1
 
-[node name="Label4" parent="." unique_id=1898415996 instance=ExtResource("7_f2dqo")]
-offset_left = 4147.0
-offset_top = -149.0
-offset_right = 4596.0
-offset_bottom = -72.0
-text = "your job isn't over yet..."
-horizontal_alignment = 1
-
 [node name="bird wiz" parent="." unique_id=443955831 instance=ExtResource("2_4iw1c")]
 z_index = 1
-position = Vector2(58, 461)
+position = Vector2(2, 494)
 
 [node name="AudioListener2D" type="AudioListener2D" parent="bird wiz" unique_id=1212625771]
 position = Vector2(246.00859, 246.42087)
@@ -136,7 +127,7 @@ scale = Vector2(0.9959863, 0.99765563)
 position = Vector2(340, 541)
 
 [node name="Platformer Stat2" parent="." unique_id=1696825721 instance=ExtResource("1_xliyy")]
-position = Vector2(4158, 129)
+position = Vector2(4308.284, 129)
 
 [node name="Platformer Stat3" parent="." unique_id=1799891836 instance=ExtResource("1_xliyy")]
 position = Vector2(-74, 541)
@@ -145,7 +136,7 @@ position = Vector2(-74, 541)
 position = Vector2(132, 541)
 
 [node name="Platformer endright" parent="." unique_id=2093356610 instance=ExtResource("1_xliyy")]
-position = Vector2(4364, 129)
+position = Vector2(4514.284, 129)
 
 [node name="StaticBody2D2" type="StaticBody2D" parent="Platformer endright" unique_id=1191930665]
 
@@ -174,10 +165,9 @@ scale = Vector2(1.94792, 2.9054)
 shape = SubResource("WorldBoundaryShape2D_2a1lc")
 
 [node name="Path2D" parent="." unique_id=1742835241 instance=ExtResource("3_4iw1c")]
-position = Vector2(3565, 205)
+position = Vector2(3715.284, 205)
 scale = Vector2(0.9387033, 1.0238976)
 curve = SubResource("Curve2D_f2dqo")
-speed = 3.5
 
 [node name="note (delete later)" type="Label" parent="." unique_id=770990330]
 offset_right = 40.0
@@ -190,10 +180,10 @@ position = Vector2(1091, 275)
 [node name="static plat circle3" parent="." unique_id=264947002 instance=ExtResource("8_kfp6p")]
 position = Vector2(1453, 320)
 
-[node name="static plat circle6" parent="." unique_id=2098611442 instance=ExtResource("8_kfp6p")]
-position = Vector2(1775.0001, 390)
+[node name="static plat circle8" parent="." unique_id=278953358 instance=ExtResource("8_kfp6p")]
+position = Vector2(3806.0002, 520.00006)
 
-[node name="static plat circle7" parent="." unique_id=278953358 instance=ExtResource("8_kfp6p")]
+[node name="static plat circle7" parent="." unique_id=1371294965 instance=ExtResource("8_kfp6p")]
 position = Vector2(2449, 602)
 
 [node name="static plat circle5" parent="." unique_id=1117544098 instance=ExtResource("8_kfp6p")]
@@ -206,13 +196,13 @@ position = Vector2(1311, 235.00003)
 position = Vector2(264.00003, 475.99997)
 
 [node name="portal" parent="." unique_id=2126923682 instance=ExtResource("10_stq4b")]
-position = Vector2(-138, 466)
+position = Vector2(-75, 463)
 
 [node name="teeth" parent="." unique_id=862176840 instance=ExtResource("1_f2dqo")]
 position = Vector2(1968, -355)
 
 [node name="portal_2" parent="." unique_id=1979264221 instance=ExtResource("11_dqmf8")]
-position = Vector2(4417, 52)
+position = Vector2(4567.284, 52)
 script = ExtResource("12_8ud87")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=970826373]
@@ -225,9 +215,6 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(1, 1, 1, 0)
-
-[node name="vision_effect_full_screen" parent="CanvasLayer/ColorRect" unique_id=1490763850 instance=ExtResource("17_xfunc")]
-position = Vector2(-14, 28)
 
 [connection signal="body_entered" from="killbox" to="killbox" method="_on_body_entered"]
 [connection signal="body_entered" from="portal_2" to="portal_2" method="_on_body_entered"]

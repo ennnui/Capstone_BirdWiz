@@ -122,23 +122,6 @@ position = Vector2(-383.00003, -307.9999)
 scale = Vector2(0.99999994, 0.99999994)
 polygon = PackedVector2Array(645, 161, 669, 187, 669, 212, 652, 213, 647, 201, 627, 212, 571, 238, 557, 187, 505, 193, 471, 174, 424, 187, 385, 178, 354, 193, 310, 186, 278, 231, 262, 279, 280, 316, 265, 338, 287, 373, 273, 410, 276, 429, 301, 423, 303, 443, 305, 471, 350, 460, 360, 463, 379, 447, 400, 469, 422, 470, 455, 459, 494, 467, 519, 451, 525, 414, 532, 407, 534, 400, 509, 384, 533, 376, 522, 366, 513, 361, 510, 347, 491, 328, 468, 324, 431, 342, 414, 330, 399, 327, 383, 336, 365, 332, 350, 326, 337, 316, 340, 300, 370, 275, 399, 265, 420, 260, 477, 262, 492.38687, 267.5235, 516, 276, 545, 290, 573, 318, 601, 363, 612, 395, 606, 439, 593, 468, 572, 495, 534, 534, 501, 554, 462, 557, 402, 559, 343, 557, 309, 546, 280, 531, 243, 512, 218, 490, 169, 434, 170, 305, 175, 272, 186, 223, 219, 177, 250, 139, 289, 109, 350, 76, 391, 70, 435, 71, 543, 91, 580, 113)
 
-[node name="helpful notes from milo" type="Label" parent="." unique_id=1828486101]
-anchors_preset = -1
-anchor_left = -0.33509365
-anchor_top = -1.3050663
-anchor_right = 0.3596068
-anchor_bottom = -0.23253316
-offset_left = 470.0
-offset_top = -295.0
-offset_right = 1769.0
-offset_bottom = -64.0
-text = "- the teeth_spiral is in teeth_spiral_ANIMATED in lvl2 because it is the only way to make it spin around its own axis.
-- does not work as is (crazy glitch)
-- when turned into area 2D it only spins one cycle then glitches in the same way, also no collision obvs
-- when animated body and area2D are layered, the two issues are combined (area2D's collision shape is animated for one spin cycle, animatable body is stuck in a glitch)
-- if you can think of something...anything... blessed be onto you and your progeny"
-metadata/_edit_use_anchors_ = true
-
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=18023420]
 libraries/ = SubResource("AnimationLibrary_ss4ny")
 autoplay = &"area2d spin"

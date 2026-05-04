@@ -16,12 +16,6 @@
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_1v3ac"]
 
-[sub_resource type="Curve2D" id="Curve2D_beans"]
-_data = {
-"points": PackedVector2Array(0, 0, 0, 0, 323.07715, 434.15643, 0, 0, 0, 0, 579.48755, 432.0988, 0, 0, 0, 0, 579.48755, 485.59674, 0, 0, 0, 0, 579.48755, 544.2387, 0, 0, 0, 0, 508.71826, 543.20996, 0, 0, 0, 0, 310.76953, 542.18115, 0, 0, 0, 0, 310.71423, 440.3341)
-}
-point_count = 7
-
 [sub_resource type="Curve2D" id="Curve2D_bmf8x"]
 _data = {
 "points": PackedVector2Array(0, 0, 0, 0, 309.09473, 216.36642, 0, 0, 0, 0, 307.16284, 763.0778, 0, 0, 0, 0, 310.06104, 250.17361)
@@ -91,7 +85,7 @@ metadata/_edit_lock_ = true
 position = Vector2(32, 330)
 
 [node name="bird wiz" parent="." unique_id=865072794 instance=ExtResource("1_tu4c3")]
-position = Vector2(4376, 487)
+position = Vector2(28, 364)
 
 [node name="platforms" type="Node2D" parent="." unique_id=712724980]
 
@@ -187,6 +181,10 @@ scale = Vector2(2.190633, 2.190633)
 position = Vector2(3812, 332)
 scale = Vector2(2.190633, 2.190633)
 
+[node name="static plat circle25" parent="platforms" unique_id=729153898 instance=ExtResource("7_beans")]
+position = Vector2(3857, 168)
+scale = Vector2(2.190633, 2.190633)
+
 [node name="static plat circle19" parent="platforms" unique_id=696366481 instance=ExtResource("7_beans")]
 position = Vector2(4040.0002, 463)
 scale = Vector2(2.190633, 2.190633)
@@ -230,11 +228,6 @@ scale = Vector2(0.87518597, 0.87518597)
 [node name="Rotating platform2" parent="platforms" unique_id=354865098 instance=ExtResource("6_e03lu")]
 position = Vector2(3360.0002, -16.000002)
 scale = Vector2(0.87518597, 0.87518597)
-
-[node name="Path2D5" parent="." unique_id=1315880157 instance=ExtResource("6_7rxco")]
-position = Vector2(3427.9998, -342)
-scale = Vector2(0.975, 0.972)
-curve = SubResource("Curve2D_beans")
 
 [node name="Path2D6" parent="." unique_id=1188350564 instance=ExtResource("6_7rxco")]
 position = Vector2(1578.0001, -155)

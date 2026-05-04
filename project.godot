@@ -15,7 +15,7 @@ compatibility/default_parent_skeleton_in_mesh_instance_3d=true
 [application]
 
 config/name="Bird Wiz"
-run/main_scene="uid://b6nfdqpeuo2ec"
+run/main_scene="uid://d0jy8wmtjb2h8"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://icon.svg"
 
@@ -25,7 +25,7 @@ AudioBg="*uid://itxoa8d33inx"
 
 [display]
 
-window/stretch/mode="viewport"
+window/stretch/mode="canvas_items"
 window/default_bus_layout="res://default_bus_layout.tres"
 
 [global_group]
