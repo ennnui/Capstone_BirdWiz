@@ -8,7 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://dexs175j60j68" path="res://Assets/scroll_folder/scroll_opened__04.png" id="6_uf85w"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kq3od"]
-size = Vector2(24, 39)
+size = Vector2(45, 10)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_x0hcb"]
 animations = [{
@@ -33,28 +33,16 @@ animations = [{
 "speed": 10.0
 }]
 
-[sub_resource type="Animation" id="Animation_kq3od"]
-resource_name = "default"
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_xwqay"]
-_data = {
-&"default": SubResource("Animation_kq3od")
-}
-
 [node name="Scroll" type="Area2D" unique_id=1319835675]
 script = ExtResource("1_xwqay")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=920455305]
-position = Vector2(-21, 6.5)
+position = Vector2(-9.5, 6.5)
 shape = SubResource("RectangleShape2D_kq3od")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1816890066]
 position = Vector2(-1, 2)
 sprite_frames = SubResource("SpriteFrames_x0hcb")
 animation = &"open_sesame"
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1890227558]
-root_node = NodePath("../..")
-libraries/ = SubResource("AnimationLibrary_xwqay")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

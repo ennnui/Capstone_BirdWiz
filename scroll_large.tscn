@@ -1,18 +1,20 @@
 [gd_scene format=3 uid="uid://de2rl0bbiw8a"]
 
-[ext_resource type="Script" uid="uid://1pjscyhggrsb" path="res://scroll.gd" id="1_b07q5"]
+[ext_resource type="Script" uid="uid://cu8fdqy7lxn1k" path="res://scroll_large.gd" id="1_hjyp1"]
 [ext_resource type="Texture2D" uid="uid://dbthhwwbci0ae" path="res://Assets/scroll_folder/scroll_opened__00.png" id="2_2100c"]
 [ext_resource type="Texture2D" uid="uid://d226y20gow2fh" path="res://Assets/scroll_folder/scroll_opened__01.png" id="3_dowou"]
-[ext_resource type="Texture2D" uid="uid://br1qetxs5bqsu" path="res://Assets/scroll_folder/scroll_opened__02.png" id="4_64fkq"]
 [ext_resource type="Texture2D" uid="uid://ci8w2k5rr55th" path="res://Assets/scroll_folder/scroll_opened__03.png" id="5_6clei"]
 [ext_resource type="Texture2D" uid="uid://dexs175j60j68" path="res://Assets/scroll_folder/scroll_opened__04.png" id="6_hf656"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_kq3od"]
-size = Vector2(24, 39)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_b07q5"]
+size = Vector2(88, 28)
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_x0hcb"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_2100c"]
 animations = [{
 "frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_2100c")
+}, {
 "duration": 1.0,
 "texture": ExtResource("2_2100c")
 }, {
@@ -20,41 +22,25 @@ animations = [{
 "texture": ExtResource("3_dowou")
 }, {
 "duration": 1.0,
-"texture": ExtResource("4_64fkq")
-}, {
-"duration": 1.0,
 "texture": ExtResource("5_6clei")
 }, {
 "duration": 1.0,
 "texture": ExtResource("6_hf656")
 }],
-"loop": false,
-"name": &"open_large_sesame",
-"speed": 10.0
+"loop": true,
+"name": &"default",
+"speed": 5.0
 }]
 
-[sub_resource type="Animation" id="Animation_kq3od"]
-resource_name = "default"
+[node name="scroll_large" type="Area2D" unique_id=1206415675]
+script = ExtResource("1_hjyp1")
 
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_xwqay"]
-_data = {
-&"default": SubResource("Animation_kq3od")
-}
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1202386261]
+position = Vector2(65, 5)
+shape = SubResource("RectangleShape2D_b07q5")
 
-[node name="Scroll_large" type="Area2D" unique_id=1319835675]
-script = ExtResource("1_b07q5")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=920455305]
-position = Vector2(-21, 6.5)
-shape = SubResource("RectangleShape2D_kq3od")
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1816890066]
-position = Vector2(-1, 2)
-sprite_frames = SubResource("SpriteFrames_x0hcb")
-animation = &"open_large_sesame"
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1890227558]
-root_node = NodePath("../..")
-libraries/ = SubResource("AnimationLibrary_xwqay")
-
-[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=628463297]
+position = Vector2(19, -3)
+sprite_frames = SubResource("SpriteFrames_2100c")
+frame = 1
+frame_progress = 0.27496678

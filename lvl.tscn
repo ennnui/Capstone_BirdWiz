@@ -38,18 +38,19 @@ distance = -19.193848
 
 [sub_resource type="Curve2D" id="Curve2D_f2dqo"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, 278, -43, 0, 0, 0, 0, 275.86914, 447.40897, 0, 0, 0, 0, 564.5654, 447.40897, 0, 0, 0, 0, 558.1738, 161.91302, 0, 0, 0, 0, 560.3042, -45.80435, 0, 0, 0, 0, 278, -44)
+"points": PackedVector2Array(0, 0, 0, 0, 278, -43, 0, 0, 0, 0, 274.54468, 186.61609, 0, 0, 0, 0, 275.86914, 447.40897, 0, 0, 0, 0, 564.5654, 447.40897, 0, 0, 0, 0, 558.1738, 161.91302, 0, 0, 0, 0, 560.3042, -45.80435, 0, 0, 0, 0, 278, -44)
 }
-point_count = 6
+point_count = 7
 
 [node name="LVL" type="Node2D" unique_id=925290357]
 
 [node name="bkg" type="ColorRect" parent="." unique_id=456223926]
 offset_left = -2656.0
 offset_top = -1951.0
-offset_right = 4912.0
+offset_right = 5720.0
 offset_bottom = 2513.0
 color = Color(0.039215688, 0.06666667, 0.12941177, 1)
+metadata/_edit_lock_ = true
 
 [node name="Monster1Png" type="Sprite2D" parent="." unique_id=677060845]
 position = Vector2(1796, 428)
@@ -60,6 +61,7 @@ texture = ExtResource("1_2j74v")
 position = Vector2(3149, 260)
 scale = Vector2(16.839998, 16.839998)
 texture = ExtResource("2_xfunc")
+metadata/_edit_lock_ = true
 
 [node name="Path2D2" parent="." unique_id=1315880157 instance=ExtResource("3_4iw1c")]
 position = Vector2(654.99994, -95.00001)
@@ -172,7 +174,7 @@ scale = Vector2(1.94792, 2.9054)
 shape = SubResource("WorldBoundaryShape2D_2a1lc")
 
 [node name="Path2D" parent="." unique_id=1742835241 instance=ExtResource("3_4iw1c")]
-position = Vector2(3557, 205)
+position = Vector2(3565, 205)
 scale = Vector2(0.9387033, 1.0238976)
 curve = SubResource("Curve2D_f2dqo")
 speed = 3.0

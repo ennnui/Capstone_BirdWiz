@@ -1,12 +1,18 @@
 extends Node2D
 
-func _physics_process(delta): 
+func _ready():
 	$AnimationPlayer.play("vision")
+	await get_tree().create_timer(5.0).timeout
+	var tween = create_tween()
+	tween.tween_property(self, "modulate:a", 0.0, 1.0)
+	await tween.finished
+	queue_free()
 	
+#below plays nonstop
+#func _physics_process(delta): 
+	#$AnimationPlayer.play("vision")
 	
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
+
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

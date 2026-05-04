@@ -10,9 +10,9 @@
 [ext_resource type="PackedScene" uid="uid://dnnn1htmdu6ha" path="res://static plat circle.tscn" id="7_beans"]
 [ext_resource type="Script" uid="uid://hib4tlpk0bvy" path="res://killbox_lvl_2.gd" id="10_tmnqu"]
 [ext_resource type="PackedScene" uid="uid://u3gygp0ov28k" path="res://portal_3.tscn" id="10_vbeg1"]
-[ext_resource type="Texture2D" uid="uid://d38nnhv13jhsr" path="res://Assets/curse_asset_snowflake.png" id="11_vbeg1"]
+[ext_resource type="Script" uid="uid://biogrtq5n6pru" path="res://teeth_spiral_animated.gd" id="12_e03lu"]
 [ext_resource type="PackedScene" uid="uid://pf467fi618sg" path="res://vision_effect_full_screen.tscn" id="12_t0ydl"]
-[ext_resource type="PackedScene" uid="uid://3xxdj0t6h20u" path="res://teeth_spiral.tscn" id="14_e03lu"]
+[ext_resource type="PackedScene" uid="uid://dl2wdgqjje3io" path="res://teeth_spiral.tscn" id="14_e03lu"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_1v3ac"]
 
@@ -30,6 +30,45 @@ point_count = 3
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_beans"]
 distance = -19.222778
+
+[sub_resource type="Animation" id="Animation_22vjt"]
+length = 8.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 6.2831855]
+}
+
+[sub_resource type="Animation" id="Animation_t0ydl"]
+resource_name = "spiraling_teeth"
+length = 8.0
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 6.2831855]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_e03lu"]
+_data = {
+&"RESET": SubResource("Animation_22vjt"),
+&"spiraling_teeth": SubResource("Animation_t0ydl")
+}
 
 [node name="LVL_2" type="Node2D" unique_id=874263600]
 
@@ -52,7 +91,7 @@ metadata/_edit_lock_ = true
 position = Vector2(32, 330)
 
 [node name="bird wiz" parent="." unique_id=865072794 instance=ExtResource("1_tu4c3")]
-position = Vector2(2743, -161)
+position = Vector2(5432, -144)
 
 [node name="platforms" type="Node2D" parent="." unique_id=712724980]
 
@@ -186,11 +225,6 @@ position = Vector2(1054.1824, 574.0258)
 scale = Vector2(1.94792, 2.9054)
 shape = SubResource("WorldBoundaryShape2D_beans")
 
-[node name="CurseAssetSnowflake" type="Sprite2D" parent="." unique_id=1991338984]
-position = Vector2(4415, 357)
-scale = Vector2(5.5624876, 5.5624876)
-texture = ExtResource("11_vbeg1")
-
 [node name="teeth_2" parent="." unique_id=440487622 instance=ExtResource("3_7rxco")]
 position = Vector2(1301.0001, -8)
 
@@ -208,8 +242,17 @@ color = Color(1, 1, 1, 0)
 [node name="vision_effect_full_screen" parent="CanvasLayer/ColorRect" unique_id=1490763850 instance=ExtResource("12_t0ydl")]
 position = Vector2(-14, 28)
 
-[node name="teeth_spiral" parent="." unique_id=705743824 instance=ExtResource("14_e03lu")]
-position = Vector2(3784, -709)
+[node name="teeth_spiral_ANIMATED" type="Node2D" parent="." unique_id=9524742]
+position = Vector2(4647, -66)
 scale = Vector2(2.02, 2.02)
+script = ExtResource("12_e03lu")
+
+[node name="teeth_spiral" parent="teeth_spiral_ANIMATED" unique_id=705743824 instance=ExtResource("14_e03lu")]
+position = Vector2(-427.22778, -318.31683)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="teeth_spiral_ANIMATED" unique_id=1220479970]
+libraries/ = SubResource("AnimationLibrary_e03lu")
+
+[node name="Timer" type="Timer" parent="teeth_spiral_ANIMATED" unique_id=1316882816]
 
 [connection signal="body_entered" from="killbox_lvl2" to="killbox_lvl2" method="_on_body_entered"]

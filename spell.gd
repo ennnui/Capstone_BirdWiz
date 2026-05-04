@@ -1,5 +1,6 @@
 extends Node2D
 
+const VISION_EFFECT = preload("res://vision_effect_full_screen.tscn")
 var speed = 600
 @onready var area = $Area2D
 var has_cleaned = false
@@ -23,7 +24,7 @@ func _on_area_2d_area_entered(area: Area2D) -> void:
 		area.queue_free()
 		queue_free()
 		#defines path
-		get_tree().root.print_tree_pretty()
+		#get_tree().root.print_tree_pretty()
 		var white_box = get_tree().root.get_node("LVL/CanvasLayer/ColorRect")
 		if not white_box:
 			white_box = get_tree().root.get_node("LVL_2/CanvasLayer/ColorRect")
